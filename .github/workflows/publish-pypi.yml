@@ -1,0 +1,70 @@
+name: Publish to PyPI
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Confirm production PyPI publishing'
+        required: true
+        type: choice
+        options:
+          - 'No'
+          - 'Yes'
+        default: 'No'
+
+jobs:
+  build:
+    name: Build distributions
+    runs-on: ubuntu-latest
+    if: github.event_name == 'release' || github.event.inputs.confirm == 'Yes'
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      
+      - name: Install build tools
+        run: pip install --upgrade build
+      
+      - name: Build all packages
+        run: |
+          for pkg_dir in packages/*/; do
+            echo "Building $(basename $pkg_dir)..."
+            cd "$pkg_dir"
+            python -m build --wheel --sdist
+            cd ../..
+          done
+      
+      - name: Collect distributions
+        run: |
+          mkdir -p dist-all
+          find packages -name '*.whl' -o -name '*.tar.gz' | while read file; do
+            cp "$file" dist-all/
+          done
+      
+      - name: Upload distributions
+        uses: actions/upload-artifact@v4
+        with:
+          name: distributions
+          path: dist-all/
+
+  publish-pypi:
+    name: Publish to PyPI
+    needs: build
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write
+    steps:
+      - name: Download distributions
+        uses: actions/download-artifact@v4
+        with:
+          name: distributions
+          path: dist/
+      
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1

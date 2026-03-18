@@ -371,31 +371,29 @@ poetry run pytest && poetry run lint-imports
 
 ## Publishing to PyPI
 
-**First time setup:**
-1. Create PyPI account: https://pypi.org/account/register/
-2. Generate API token: https://pypi.org/manage/account/token/
-3. Configure `~/.pypirc`:
-   ```ini
-   [pypi]
-   username = __token__
-   password = pypi-YOUR_TOKEN_HERE
-   ```
-4. Install tools: `pip install --upgrade build twine`
+Publishing is automated via GitHub Actions using OpenID Connect trusted publishing (no tokens required).
 
-**Publishing new version:**
+**Setup (one-time):**
+1. Configure trusted publisher at https://test.pypi.org/manage/account/publishing/:
+   - PyPI project name: `<package-name>`
+   - Owner: `<your-github-username>`
+   - Repository name: `python-web-toolkit`
+   - Workflow name: `publish-testpypi.yml`
+   - Environment name: `testpypi`
+
+2. Repeat for production PyPI at https://pypi.org/manage/account/publishing/ using `publish-pypi.yml` workflow.
+
+**Publishing workflow:**
+1. Bump version in package `pyproject.toml` files (e.g., 0.1.0 → 0.1.1)
+2. Commit and push changes
+3. Run workflow:
+   - TestPyPI: Go to Actions → "Publish to TestPyPI" → Run workflow
+   - Production: Create GitHub release with version tag (e.g., `v0.1.1`)
+
+**Local testing:**
 ```powershell
-# 1. Bump version in pyproject.toml (e.g., 0.1.0 → 0.1.1)
-# 2. Build all packages
 .\scripts\build-all.ps1
-
-# 3. Test on Test PyPI first (recommended)
-.\scripts\publish-test.ps1
-
-# 4. Publish to production PyPI
-.\scripts\publish-prod.ps1
 ```
-
-**Note:** Packages must be published in dependency order (Layer 1 → 2 → 3). Scripts handle this automatically.
 
 ## License
 

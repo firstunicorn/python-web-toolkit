@@ -1,0 +1,63 @@
+name: Publish to TestPyPI
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    name: Build distributions
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      
+      - name: Install build tools
+        run: pip install --upgrade build
+      
+      - name: Build all packages
+        run: |
+          for pkg_dir in packages/*/; do
+            echo "Building $(basename $pkg_dir)..."
+            cd "$pkg_dir"
+            python -m build --wheel --sdist
+            cd ../..
+          done
+      
+      - name: Collect distributions
+        run: |
+          mkdir -p dist-all
+          find packages -name '*.whl' -o -name '*.tar.gz' | while read file; do
+            cp "$file" dist-all/
+          done
+      
+      - name: Upload distributions
+        uses: actions/upload-artifact@v4
+        with:
+          name: distributions
+          path: dist-all/
+
+  publish-testpypi:
+    name: Publish to TestPyPI
+    needs: build
+    runs-on: ubuntu-latest
+    environment: testpypi
+    permissions:
+      id-token: write
+    steps:
+      - name: Download distributions
+        uses: actions/download-artifact@v4
+        with:
+          name: distributions
+          path: dist/
+      
+      - name: Publish to TestPyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://test.pypi.org/legacy/
