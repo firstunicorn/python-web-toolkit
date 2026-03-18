@@ -21,11 +21,17 @@ jobs:
       - name: Install build tools
         run: pip install --upgrade build
       
-      - name: Build all packages
+      - name: Build selected packages
         run: |
-          for pkg_dir in packages/*/; do
-            echo "Building $(basename $pkg_dir)..."
-            cd "$pkg_dir"
+          # Start with foundational packages for testing
+          packages=(
+            "python-technical-primitives"
+            "python-app-exceptions"
+          )
+          
+          for pkg in "${packages[@]}"; do
+            echo "Building $pkg..."
+            cd "packages/$pkg"
             python -m build --wheel --sdist
             cd ../..
           done
