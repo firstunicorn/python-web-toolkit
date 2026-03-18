@@ -1,0 +1,45 @@
+[project]
+name = "python-structlog-config"
+version = "0.1.0"
+description = "Structured logging configuration with OTel and Sentry support"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "GridFlow Team", email = "vialogue@proton.me"}
+]
+
+dependencies = [
+    "structlog>=23.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/firstunicorn/python-web-toolkit"
+Repository = "https://github.com/firstunicorn/python-web-toolkit"
+
+[project.optional-dependencies]
+otel = ["opentelemetry-instrumentation-logging>=0.40b0"]
+sentry = ["sentry-sdk>=1.40.0"]
+all = [
+    "opentelemetry-instrumentation-logging>=0.40b0",
+    "sentry-sdk>=1.40.0",
+]
+dev = [
+    "pytest>=7.4.0",
+]
+
+[build-system]
+requires = ["setuptools>=68.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.0.2,<10.0.0)",
+    "hypothesis (>=6.151.5,<7.0.0)"
+]

@@ -1,0 +1,45 @@
+[project]
+name = "fastapi-middleware-toolkit"
+version = "0.1.0"
+description = "Reusable FastAPI middleware setup functions (CORS, error handlers, lifespan)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "GridFlow Team", email = "vialogue@proton.me"}
+]
+
+dependencies = [
+    "fastapi>=0.100.0",
+    "structlog>=23.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/firstunicorn/python-web-toolkit"
+Repository = "https://github.com/firstunicorn/python-web-toolkit"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "httpx>=0.24.0",
+]
+
+[build-system]
+requires = ["setuptools>=68.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.0.2,<10.0.0)",
+    "hypothesis (>=6.151.5,<7.0.0)",
+    "httpx (>=0.24.0,<1.0.0)",
+    "pytest-asyncio (>=0.21.0)"
+]

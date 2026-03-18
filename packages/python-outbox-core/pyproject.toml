@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-outbox-core"
+version = "0.1.0"
+description = "Core abstractions for implementing the Transactional Outbox pattern with Kafka"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "GridFlow Team", email = "vialogue@proton.me"}
+]
+dependencies = [
+    "pydantic>=2.0.0",
+    "sqlalchemy[asyncio]>=2.0.0",
+    "structlog>=24.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/firstunicorn/python-web-toolkit"
+Repository = "https://github.com/firstunicorn/python-web-toolkit"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "hypothesis>=6.100.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.0.2,<10.0.0)",
+    "pytest-asyncio (>=0.23.0)",
+    "hypothesis (>=6.151.5,<7.0.0)"
+]

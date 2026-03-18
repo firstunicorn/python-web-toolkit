@@ -1,0 +1,46 @@
+@startuml
+!define RECTANGLE class
+
+skinparam componentStyle rectangle
+skinparam backgroundColor white
+skinparam component {
+  BackgroundColor<<client>> LightBlue
+  BackgroundColor<<repository>> LightGreen
+  BackgroundColor<<usecase>> LightYellow
+  BackgroundColor<<handler>> Wheat
+  BackgroundColor<<factory>> LightCoral
+  BackgroundColor<<protocol>> LightGray
+  BackgroundColor<<strategy>> LightCyan
+  BackgroundColor<<database>> LightPink
+}
+
+component "Client Code (Your Application)\nExample: UserRepository(session, UserORM)" as Client <<client>>
+
+component "BaseRepository (Repository + Facade Patterns)\n• Facade: Simplifies complex use case coordination\n• Repository: Abstracts data access layer\n• Composition: Delegates to use case handlers\n\nMethods:\n- get_by_id() → GetByIdHandler\n- create() → CreateHandler\n- find_paginated() → FindPaginatedHandler" as BaseRepository <<repository>>
+
+component "Use Cases (CQRS Pattern)\n• Separates read operations (queries) from writes\n• Each use case in isolated folder\n\nQuery Side:           | Command Side:\n- get_by_id/          | - create/\n- get_all/            | - update/\n- exists/             | - delete/\n- count/              |\n- find_paginated/     |" as UseCases <<usecase>>
+
+component "FindPaginatedHandler (Coordinator)\n• Pattern: Handler Pattern (executes use case)\n• Uses: Factory Pattern for strategy creation\n• Uses: Strategy Pattern for algorithm delegation\n\n__init__():\n  1. Get strategy from Factory\n\nexecute():\n  2. Delegate to strategy.execute()" as FindPaginatedHandler <<handler>>
+
+component "Strategy Factory\n(Factory Pattern)\n\ncreate():\n if FastCRUD:\n   → FastCRUD\n else:\n   → Native" as StrategyFactory <<factory>>
+
+component "IPaginationStrategy (Protocol)\n• Type-safe interface (PEP 544)\n• No inheritance needed" as IPaginationStrategy <<protocol>>
+
+component "FastCRUDStrategy\n(Strategy Pattern)\n\nUses FastCRUD lib\nBattle-tested\nFeature-rich" as FastCRUDStrategy <<strategy>>
+
+component "NativeStrategy\n(Strategy Pattern)\n\nUses pure SQLAlchemy\nZero dependencies\nSimple & clean" as NativeStrategy <<strategy>>
+
+component "Database\n(PostgreSQL)" as Database <<database>>
+
+Client -down-> BaseRepository : uses
+BaseRepository -down-> UseCases : delegates to
+UseCases -down-> FindPaginatedHandler : (focus on find_paginated)
+FindPaginatedHandler -down-> StrategyFactory : 1. Get strategy from Factory
+FindPaginatedHandler -down-> IPaginationStrategy : 2. Delegate to strategy.execute()
+StrategyFactory -up-> IPaginationStrategy
+IPaginationStrategy <|.. FastCRUDStrategy : implements
+IPaginationStrategy <|.. NativeStrategy : implements
+FastCRUDStrategy -down-> Database
+NativeStrategy -down-> Database
+
+@enduml

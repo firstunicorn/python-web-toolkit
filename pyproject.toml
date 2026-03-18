@@ -1,0 +1,183 @@
+[tool.poetry]
+name = "python-web-toolkit"
+version = "0.1.0"
+description = "Comprehensive Python web development toolkit - monorepo with 16 micro-libraries"
+authors = ["GridFlow Team <vialogue@proton.me>"]
+readme = "README.md"
+license = "MIT"
+homepage = "https://github.com/firstunicorn/python-web-toolkit"
+repository = "https://github.com/firstunicorn/python-web-toolkit"
+keywords = ["fastapi", "sqlalchemy", "cqrs", "mediator", "repository-pattern", "web-toolkit", "microservices"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Framework :: FastAPI",
+]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+# Core Primitives & Utilities
+python-technical-primitives = {path = "packages/python-technical-primitives", develop = true}
+python-app-exceptions = {path = "packages/python-app-exceptions", develop = true}
+python-infrastructure-exceptions = {path = "packages/python-infrastructure-exceptions", develop = true}
+python-input-validation = {path = "packages/python-input-validation", develop = true}
+
+# CQRS & Mediator Pattern
+python-cqrs-core = {path = "packages/python-cqrs-core", develop = true}
+python-mediator = {path = "packages/python-mediator", develop = true}
+python-cqrs-dispatcher = {path = "packages/python-cqrs-dispatcher", develop = true}
+
+# Data & Mapping
+python-dto-mappers = {path = "packages/python-dto-mappers", develop = true}
+pydantic-response-models = {path = "packages/pydantic-response-models", develop = true}
+
+# Database & Repository Pattern
+sqlalchemy-async-session-factory = {path = "packages/sqlalchemy-async-session-factory", develop = true}
+sqlalchemy-async-repositories = {path = "packages/sqlalchemy-async-repositories", develop = true}
+postgres-data-sanitizers = {path = "packages/postgres-data-sanitizers", develop = true}
+
+# FastAPI Extensions
+fastapi-config-patterns = {path = "packages/fastapi-config-patterns", develop = true}
+fastapi-middleware-toolkit = {path = "packages/fastapi-middleware-toolkit", develop = true}
+
+# Logging & Observability
+python-structlog-config = {path = "packages/python-structlog-config", develop = true}
+
+# Event-Driven / Outbox Pattern
+python-outbox-core = {path = "packages/python-outbox-core", develop = true}
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^9.0.0"
+pytest-asyncio = "^0.23.0"
+hypothesis = "^6.100.0"
+black = "^23.0.0"
+ruff = "^0.1.0"
+mypy = "^1.5.0"
+import-linter = "^2.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = ["packages/*/tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+asyncio_mode = "auto"
+addopts = [
+    "-v",
+    "--strict-markers",
+    "--tb=short",
+]
+
+[tool.black]
+line-length = 100
+target-version = ['py310']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "C4", # flake8-comprehensions
+]
+ignore = [
+    "E501",  # line too long (handled by black)
+    "B008",  # do not perform function calls in argument defaults
+]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+
+[tool.importlinter]
+root_packages = [
+    "python_technical_primitives",
+    "python_app_exceptions",
+    "python_infrastructure_exceptions",
+    "python_input_validation",
+    "postgres_data_sanitizers",
+    "python_cqrs_core",
+    "python_mediator",
+    "pydantic_response_models",
+    "python_structlog_config",
+    "python_outbox_core",
+    "sqlalchemy_async_session_factory",
+    "python_dto_mappers",
+    "python_cqrs_dispatcher",
+    "sqlalchemy_async_repositories",
+    "fastapi_config_patterns",
+    "fastapi_middleware_toolkit",
+]
+
+[[tool.importlinter.contracts]]
+name = "Primitives Layer Cannot Import Domain/Application"
+type = "forbidden"
+source_modules = [
+    "python_technical_primitives",
+    "python_app_exceptions",
+    "python_infrastructure_exceptions",
+]
+forbidden_modules = [
+    "python_cqrs_dispatcher",
+    "sqlalchemy_async_repositories",
+    "fastapi_middleware_toolkit",
+    "fastapi_config_patterns",
+    "python_mediator",
+    "python_cqrs_core",
+    "pydantic_response_models",
+    "python_dto_mappers",
+]
+
+[[tool.importlinter.contracts]]
+name = "Domain Layer Cannot Import Application"
+type = "forbidden"
+source_modules = [
+    "python_cqrs_core",
+    "python_mediator",
+    "pydantic_response_models",
+    "python_dto_mappers",
+    "python_input_validation",
+]
+forbidden_modules = [
+    "python_cqrs_dispatcher",
+    "sqlalchemy_async_repositories",
+    "fastapi_middleware_toolkit",
+    "fastapi_config_patterns",
+]
+
+[[tool.importlinter.contracts]]
+name = "Core Components Independence"
+type = "independence"
+modules = [
+    "python_cqrs_core",
+    "python_mediator",
+]
