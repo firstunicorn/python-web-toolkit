@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-Comprehensive Python web development toolkit organized as a monorepo with 16 independent micro-libraries.
+Comprehensive Python web development toolkit organized as a monorepo with 17 independent micro-libraries.
 
 ## What each library solves
 
@@ -414,6 +414,35 @@ class UserCreated(IOutboxEvent):
 ```
 </details>
 
+<details>
+<summary><b>python-domain-events</b> — in-process domain event dispatch</summary>
+
+BEFORE (without library):
+```python
+# ad-hoc event handling scattered across services
+class UserService:
+    def create_user(self, data):
+        user = self.repo.save(data)
+        self.email_service.send_welcome(user)      # tight coupling
+        self.cache_service.invalidate("users")      # more coupling
+        self.activity_log.record("user_created")    # even more
+```
+
+AFTER (using library):
+```python
+from python_domain_events import BaseDomainEvent, InProcessEventDispatcher
+
+class UserCreated(BaseDomainEvent):
+    event_type: str = "user.created"
+    user_id: int
+
+dispatcher = InProcessEventDispatcher()
+dispatcher.register(UserCreated, SendWelcomeEmailHandler())
+dispatcher.register(UserCreated, InvalidateCacheHandler())
+await dispatcher.dispatch(UserCreated(user_id=42))
+```
+</details>
+
 ### Summary
 
 | Library | BEFORE (without) | AFTER (with) |
@@ -433,6 +462,7 @@ class UserCreated(IOutboxEvent):
 | **postgres-data-sanitizers** | Crashes on null chars / surrogates in Postgres writes | Auto-strip before insert — zero silent data corruption |
 | **python-cqrs-dispatcher** | Wiring commands to handlers manually each time | Auto-dispatch: register handler once, dispatcher routes |
 | **pydantic-response-models** | Inconsistent API response shapes across endpoints | `ApiResponse[T]`, `PaginatedResponse[T]` — uniform contract |
+| **python-domain-events** | Ad-hoc event handling, tight coupling to side-effects | `InProcessEventDispatcher` — register/dispatch with tracing |
 | **python-outbox-core** | Lost events on crash / inconsistent event publishing | Transactional outbox — events saved atomically with data |
 
 ## Project Structure
