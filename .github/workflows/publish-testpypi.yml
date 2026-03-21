@@ -23,15 +23,11 @@ jobs:
       
       - name: Build and collect distributions
         run: |
-          packages=(
-            "python-technical-primitives"
-            "python-app-exceptions"
-          )
           mkdir -p dist-all
-          
-          for pkg in "${packages[@]}"; do
+          for pkg_dir in packages/*/; do
+            pkg=$(basename "$pkg_dir")
             echo "Building $pkg..."
-            cd "packages/$pkg"
+            cd "$pkg_dir"
             python -m build --wheel --sdist
             cp dist/* ../../dist-all/
             cd ../..
@@ -61,3 +57,4 @@ jobs:
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           repository-url: https://test.pypi.org/legacy/
+          skip-existing: true
