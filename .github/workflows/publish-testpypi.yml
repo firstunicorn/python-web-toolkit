@@ -21,26 +21,20 @@ jobs:
       - name: Install build tools
         run: pip install --upgrade build
       
-      - name: Build selected packages
+      - name: Build and collect distributions
         run: |
-          # Start with foundational packages for testing
           packages=(
             "python-technical-primitives"
             "python-app-exceptions"
           )
+          mkdir -p dist-all
           
           for pkg in "${packages[@]}"; do
             echo "Building $pkg..."
             cd "packages/$pkg"
             python -m build --wheel --sdist
+            cp dist/* ../../dist-all/
             cd ../..
-          done
-      
-      - name: Collect distributions
-        run: |
-          mkdir -p dist-all
-          find packages -name '*.whl' -o -name '*.tar.gz' | while read file; do
-            cp "$file" dist-all/
           done
       
       - name: Upload distributions
