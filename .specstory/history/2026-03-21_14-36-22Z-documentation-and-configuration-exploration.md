@@ -2,7 +2,7 @@
 
 # 2026-03-21 14:36:22Z
 
-<!-- cursoride Session e966a99b-dba2-4158-80a7-a8060e36cad2 (2026-03-21 14:36:22Z) -->
+<!-- cursoride Session task-ed14682b-1630-430a-8019-ffc7c1cb3107 (2026-03-21 14:36:22Z) -->
 
 _**User**_
 
@@ -494,3 +494,174 @@ Status: **completed**
 <summary>Tool use: **ripgrep_raw_search**</summary>
 
 </details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<think><details><summary>Thought Process</summary>
+**Reviewing docs structure**
+
+I'm documenting the current state of the docs folder and Sphinx configuration. </details></think>
+
+_**Agent (composer-1.5)**_
+
+
+
+
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
+<details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": false,
+  "glob": "**/pyproject.toml",
+  "path": "c:\\coding\\gridflow\\python-web-toolkit\\packages",
+  "pattern": "docs\\s*="
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "content",
+  "path": "c:\\coding\\gridflow\\python-web-toolkit\\packages",
+  "pattern": "docs\\s*=",
+  "topFiles": [],
+  "totalFiles": 0,
+  "totalMatches": 0
+}
+```
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
+<details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": false,
+  "contextAfter": 3,
+  "contextBefore": 0,
+  "glob": "**/pyproject.toml",
+  "path": "c:\\coding\\gridflow\\python-web-toolkit\\packages",
+  "pattern": "docs"
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "content",
+  "path": "c:\\coding\\gridflow\\python-web-toolkit\\packages",
+  "pattern": "docs",
+  "topFiles": [],
+  "totalFiles": 0,
+  "totalMatches": 0
+}
+```
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+
+---
+
+## Documentation Exploration Report
+
+### 1. `docs/` folder and Sphinx config
+
+| Item | Finding |
+|------|---------|
+| Root `docs/` | None at repo root |
+| Package-level `docs/` | `packages/python-cqrs-core/docs/` only |
+| Sphinx `conf.py` | None |
+| `Makefile` | None |
+| `make.bat` | None |
+
+### 2. Documentation files
+
+**Markdown in `packages/python-cqrs-core/docs/`:**
+
+- `api-reference.md` – API reference
+- `observability.md`
+- `usage-guide.md`
+- `why-use-base-classes.md`
+
+**RST files:** none.
+
+### 3. Root `pyproject.toml`
+
+- Uses Poetry (`package-mode = false`)
+- Dev dependencies: `pytest`, `pytest-asyncio`, `hypothesis`, `black`, `ruff`, `mypy`, `import-linter`
+- **No Sphinx or docs-related dependencies**
+- **No docs extra**
+
+### 4. `README.md` (first 100 lines)
+
+Overview of a 16-package monorepo, with badges (tests, Python, license, code style) and library descriptions (e.g. `python-input-validation`, `sqlalchemy-async-repositories`, `sqlalchemy-async-session-factory`, `python-structlog-config`) in collapsible `<details>` sections. Each section shows “before/after” usage snippets. The full README is 829 lines.
+
+### 5. Read the Docs config
+
+- `.readthedocs.yml` – not present
+- `.readthedocs.yaml` – not present
+- No other Read the Docs config files
+
+### 6. Docs extra / dev group
+
+**Root `pyproject.toml`:**
+
+- `[tool.poetry.group.dev.dependencies]` only
+- No docs group or docs extra
+
+**Per-package `pyproject.toml`:**
+
+- All use `[project.optional-dependencies]`
+- Only `dev` extra defined (e.g. pytest, black, mypy, ruff, hypothesis)
+- No `docs` extra in any package
+
+The `docs` entries in some `poetry.lock` files come from transitive dependencies of those packages (e.g. furo, sphinx, etc.), not from docs extras in this monorepo.
+
+---
+
+### Summary
+
+| Category | Status |
+|----------|--------|
+| Sphinx setup | Not present |
+| Root docs folder | None |
+| Package docs | Only in `python-cqrs-core` (4 `.md` files) |
+| RST files | None |
+| Read the Docs config | None |
+| Docs extra (root) | None |
+| Docs extra (packages) | None |

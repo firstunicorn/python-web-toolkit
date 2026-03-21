@@ -163,3 +163,1452 @@ _**Agent (composer-1.5)**_
 <summary>Tool use: **read_file_v2**</summary>
 
 </details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-cqrs-dispatcher\src\python_cqrs_dispatcher\__init__.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-dto-mappers\src\python_dto_mappers\__init__.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\pydantic-response-models\src\pydantic_response_models\__init__.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\sqlalchemy-async-repositories\src\sqlalchemy_async_repositories\__init__.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\fastapi-config-patterns\src\fastapi_config_patterns\__init__.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\fastapi-middleware-toolkit\src\fastapi_middleware_toolkit\__init__.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-outbox-core\src\python_outbox_core\__init__.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+
+Reading source modules to extract signatures:
+
+
+_**Agent (composer-1.5)**_
+
+File not found
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+File not found
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+File not found
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-app-exceptions\src\python_app_exceptions\base.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-app-exceptions\src\python_app_exceptions\validation.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-input-validation\src\python_input_validation\validators.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-input-validation\src\python_input_validation\sanitizers.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\postgres-data-sanitizers\src\postgres_data_sanitizers\sanitize.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+
+
+
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="search" data-tool-name="glob_file_search">
+<details>
+<summary>Tool use: **glob_file_search** • Searched codebase "" • **24** results in **1** directory</summary>
+
+Directory: **c:\coding\gridflow\python-web-toolkit\packages\python-technical-primitives** (24 files)
+
+| File |
+|------|
+| `../packages/python-technical-primitives/tests/patterns/test_specification_base.py` |
+| `../packages/python-technical-primitives/src/python_technical_primitives/datetime/operations.py` |
+| `../packages/python-technical-primitives/tests/patterns/test_fixtures.py` |
+| `../packages/python-technical-primitives/src/python_technical_primitives/patterns/__init__.py` |
+| `../packages/python-technical-primitives/tests/strategies/text.py` |
+| `../packages/python-technical-primitives/tests/datetime/__init__.py` |
+| `../packages/python-technical-primitives/tests/text/__init__.py` |
+| `../packages/python-technical-primitives/tests/text/test_case_conversion.py` |
+| `../packages/python-technical-primitives/tests/strategies/__init__.py` |
+| `../packages/python-technical-primitives/tests/patterns/__init__.py` |
+| `../packages/python-technical-primitives/tests/strategies/temporal.py` |
+| `../packages/python-technical-primitives/tests/datetime/test_datetime_manipulation.py` |
+| `../packages/python-technical-primitives/tests/__init__.py` |
+| `../packages/python-technical-primitives/src/python_technical_primitives/text/__init__.py` |
+| `../packages/python-technical-primitives/tests/datetime/test_iso_conversion.py` |
+| `../packages/python-technical-primitives/tests/patterns/test_specification_composition.py` |
+| `../packages/python-technical-primitives/src/python_technical_primitives/text/operations.py` |
+| `../packages/python-technical-primitives/src/python_technical_primitives/__init__.py` |
+| `../packages/python-technical-primitives/src/python_technical_primitives/datetime/__init__.py` |
+| `../packages/python-technical-primitives/src/python_technical_primitives/patterns/base.py` |
+| `../packages/python-technical-primitives/src/python_technical_primitives/patterns/compositions.py` |
+| `../packages/python-technical-primitives/tests/datetime/test_expiry_calculations.py` |
+| `../packages/python-technical-primitives/tests/text/test_filename_operations.py` |
+| `../packages/python-technical-primitives/tests/text/test_truncation_whitespace.py` |
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
+<summary>Tool use: **glob_file_search**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-infrastructure-exceptions\src\python_infrastructure_exceptions\base.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\postgres-data-sanitizers\src\postgres_data_sanitizers\escape.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\postgres-data-sanitizers\src\postgres_data_sanitizers\validate.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\sqlalchemy-async-session-factory\src\sqlalchemy_async_session_factory\engine.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\sqlalchemy-async-session-factory\src\sqlalchemy_async_session_factory\session.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-structlog-config\src\python_structlog_config\config.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-structlog-config\src\python_structlog_config\presets.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+
+
+
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-technical-primitives\src\python_technical_primitives\datetime\__init__.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-technical-primitives\src\python_technical_primitives\text\__init__.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-technical-primitives\src\python_technical_primitives\patterns\__init__.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-cqrs-core\src\python_cqrs_core\command.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-cqrs-core\src\python_cqrs_core\query.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-cqrs-core\src\python_cqrs_core\base_command.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-cqrs-core\src\python_cqrs_core\base_query.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-mediator\src\python_mediator\mediator.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+File not found
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+
+
+
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="search" data-tool-name="glob_file_search">
+<details>
+<summary>Tool use: **glob_file_search** • Searched codebase "" • **8** results in **1** directory</summary>
+
+Directory: **c:\coding\gridflow\python-web-toolkit\packages\python-mediator** (8 files)
+
+| File |
+|------|
+| `../packages/python-mediator/src/python_mediator/behaviors/__init__.py` |
+| `../packages/python-mediator/src/python_mediator/__init__.py` |
+| `../packages/python-mediator/tests/__init__.py` |
+| `../packages/python-mediator/src/python_mediator/behaviors/protocol.py` |
+| `../packages/python-mediator/tests/test_mediator.py` |
+| `../packages/python-mediator/src/python_mediator/behaviors/observability.py` |
+| `../packages/python-mediator/src/python_mediator/mediator.py` |
+| `../packages/python-mediator/src/python_mediator/behaviors/validation_behavior.py` |
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
+<summary>Tool use: **glob_file_search**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-cqrs-dispatcher\src\python_cqrs_dispatcher\dispatcher.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-cqrs-dispatcher\src\python_cqrs_dispatcher\registry.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-dto-mappers\src\python_dto_mappers\base.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-dto-mappers\src\python_dto_mappers\decorators.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-dto-mappers\src\python_dto_mappers\auto_mapper.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\pydantic-response-models\src\pydantic_response_models\responses.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\pydantic-response-models\src\pydantic_response_models\fields.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\sqlalchemy-async-repositories\src\sqlalchemy_async_repositories\base.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+
+
+
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-technical-primitives\src\python_technical_primitives\datetime\operations.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-technical-primitives\src\python_technical_primitives\text\operations.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-technical-primitives\src\python_technical_primitives\patterns\base.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-mediator\src\python_mediator\behaviors\__init__.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\postgres-data-sanitizers\src\postgres_data_sanitizers\string_validators.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\fastapi-config-patterns\src\fastapi_config_patterns\base_settings.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\fastapi-config-patterns\src\fastapi_config_patterns\database_settings.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\fastapi-middleware-toolkit\src\fastapi_middleware_toolkit\cors.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\fastapi-middleware-toolkit\src\fastapi_middleware_toolkit\error_handlers.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\fastapi-middleware-toolkit\src\fastapi_middleware_toolkit\lifespan.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+
+
+
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-app-exceptions\src\python_app_exceptions\retry.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-app-exceptions\src\python_app_exceptions\business.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\fastapi-config-patterns\src\fastapi_config_patterns\validators.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\fastapi-middleware-toolkit\src\fastapi_middleware_toolkit\cache_control.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-outbox-core\src\python_outbox_core\events.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-outbox-core\src\python_outbox_core\repository.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+File not found
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+File not found
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-outbox-core\src\python_outbox_core\config.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-outbox-core\src\python_outbox_core\health_check.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+
+
+
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="search" data-tool-name="glob_file_search">
+<details>
+<summary>Tool use: **glob_file_search** • Searched codebase "" • **23** results in **1** directory</summary>
+
+Directory: **c:\coding\gridflow\python-web-toolkit\packages\python-outbox-core** (23 files)
+
+| File |
+|------|
+| `../packages/python-outbox-core/src/python_outbox_core/repository.py` |
+| `../packages/python-outbox-core/src/python_outbox_core/publisher/__init__.py` |
+| `../packages/python-outbox-core/src/python_outbox_core/__init__.py` |
+| `../packages/python-outbox-core/src/python_outbox_core/formatters/__init__.py` |
+| `../packages/python-outbox-core/src/python_outbox_core/formatters/cloudevents.py` |
+| `../packages/python-outbox-core/src/python_outbox_core/publisher/base.py` |
+| `../packages/python-outbox-core/tests/test_outbox_publisher.py` |
+| `../packages/python-outbox-core/tests/test_config.py` |
+| `../packages/python-outbox-core/src/python_outbox_core/publisher/interface.py` |
+| `../packages/python-outbox-core/src/python_outbox_core/adapters/__init__.py` |
+| `../packages/python-outbox-core/src/python_outbox_core/adapters/examples/__init__.py` |
+| `../packages/python-outbox-core/src/python_outbox_core/adapters/examples/kafka_routing.py` |
+| `../packages/python-outbox-core/src/python_outbox_core/publisher/error_handler.py` |
+| `../packages/python-outbox-core/src/python_outbox_core/config.py` |
+| `../packages/python-outbox-core/tests/test_events.py` |
+| `../packages/python-outbox-core/src/python_outbox_core/formatters/base.py` |
+| `../packages/python-outbox-core/src/python_outbox_core/publisher/metrics.py` |
+| `../packages/python-outbox-core/tests/hypothesis_config.py` |
+| `../packages/python-outbox-core/src/python_outbox_core/health_check.py` |
+| `../packages/python-outbox-core/src/python_outbox_core/adapters/examples/kong_simple.py` |
+| `../packages/python-outbox-core/tests/__init__.py` |
+| `../packages/python-outbox-core/tests/conftest.py` |
+| `../packages/python-outbox-core/src/python_outbox_core/events.py` |
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
+<summary>Tool use: **glob_file_search**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\sqlalchemy-async-repositories\src\sqlalchemy_async_repositories\interfaces.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\sqlalchemy-async-repositories\src\sqlalchemy_async_repositories\pagination\__init__.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+File not found
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-dto-mappers\src\python_dto_mappers\utils.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\sqlalchemy-async-session-factory\src\sqlalchemy_async_session_factory\utils.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+
+
+
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-outbox-core\src\python_outbox_core\publisher\__init__.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-outbox-core\src\python_outbox_core\publisher\base.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-outbox-core\src\python_outbox_core\formatters\__init__.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-outbox-core\src\python_outbox_core\formatters\cloudevents.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
+<details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": false,
+  "path": "c:\\coding\\gridflow\\python-web-toolkit\\packages\\python-dto-mappers",
+  "pattern": "to_upper|to_lower|field_mappers"
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "content",
+  "path": "c:\\coding\\gridflow\\python-web-toolkit\\packages\\python-dto-mappers",
+  "pattern": "to_upper|to_lower|field_mappers",
+  "topFiles": [
+    {
+      "matchCount": 4,
+      "uri": "packages/python-dto-mappers/src/python_dto_mappers/field_mappers/text_case.py"
+    },
+    {
+      "matchCount": 10,
+      "uri": "packages/python-dto-mappers/tests/test_field_mappers.py"
+    },
+    {
+      "matchCount": 5,
+      "uri": "packages/python-dto-mappers/src/python_dto_mappers/__init__.py"
+    },
+    {
+      "matchCount": 7,
+      "uri": "packages/python-dto-mappers/src/python_dto_mappers/field_mappers/__init__.py"
+    }
+  ],
+  "totalFiles": 4,
+  "totalMatches": 26
+}
+```
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\sqlalchemy-async-repositories\src\sqlalchemy_async_repositories\pagination\models.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+File not found
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-mediator\src\python_mediator\behaviors\observability.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-mediator\src\python_mediator\behaviors\validation_behavior.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<think><details><summary>Thought Process</summary>
+**Aligning behavior signatures**
+
+I'm adjusting the ValidationBehavior and LoggingBehavior signatures to match the mediator's expected `(request, handler)` format. I'm adjusting the behavior signatures to accept handler objects with .handle() method instead of expecting a callable next parameter. I'm adapting the behavior signatures to support both callable handlers and handler objects with .handle() methods. </details></think>
+
+_**Agent (composer-1.5)**_
+
+
+
+
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-dto-mappers\src\python_dto_mappers\field_mappers\__init__.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-dto-mappers\src\python_dto_mappers\field_mappers\datetime_mapping.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-dto-mappers\src\python_dto_mappers\field_mappers\object_mapping.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-outbox-core\src\python_outbox_core\formatters\base.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-outbox-core\src\python_outbox_core\publisher\interface.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-infrastructure-exceptions\src\python_infrastructure_exceptions\database.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+
+Checking how `python-technical-primitives` is exported and whether it re-exports submodule members:
+
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-technical-primitives\src\python_technical_primitives\__init__.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-dto-mappers\src\python_dto_mappers\field_mappers\text_case.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+
+Here’s the public API summary for all 16 packages:
+
+---
+
+## 1. python-technical-primitives
+
+**Package root exports:** `datetime`, `text`, `patterns` (submodules only, no top-level symbols).
+
+| Import | Signature | Example |
+|--------|------------|---------|
+| `from python_technical_primitives.datetime import utc_now` | `utc_now() -> datetime` | `now = utc_now()` |
+| `from python_technical_primitives.datetime import add_days, add_hours` | `add_days(dt, days)`, `add_hours(dt, hours)` | `expiry = add_days(utc_now(), 7)` |
+| `from python_technical_primitives.datetime import is_expired, days_until` | `is_expired(expiry_dt, ref?)`, `days_until(target_dt, ref?)` | `if is_expired(token.expires_at): ...` |
+| `from python_technical_primitives.datetime import to_iso_string, from_iso_string` | `to_iso_string(dt)`, `from_iso_string(iso_str)` | `s = to_iso_string(dt)` |
+| `from python_technical_primitives.text import truncate, sanitize_filename, ...` | `truncate(text, max_length, suffix?)`, `sanitize_filename(filename)` | `truncate("long text", 20)` |
+| `from python_technical_primitives.patterns import Specification, AndSpecification, OrSpecification, NotSpecification` | `Specification[T]`: `is_satisfied_by(candidate)`; supports `&`, `\|`, `~` | `spec = AdultSpec() & VerifiedSpec(); spec(user)` |
+
+---
+
+## 2. python-app-exceptions
+
+| Import | Signature | Example |
+|--------|------------|---------|
+| `from python_app_exceptions import BaseApplicationException` | `BaseApplicationException(message, details=None)` | `raise BaseApplicationException("Error", "details")` |
+| `from python_app_exceptions import BusinessLogicError` | `BusinessLogicError(rule, details=None)` | `raise BusinessLogicError("duplicate_email")` |
+| `from python_app_exceptions import ValidationError` | `ValidationError(field, value=None, details=None)` | `raise ValidationError("email", "bad@")` |
+| `from python_app_exceptions import InvalidInputError` | `InvalidInputError(input_name, expected_format=None)` | `raise InvalidInputError("token", "hex string")` |
+| `from python_app_exceptions import RetryExhaustedException` | `RetryExhaustedException(operation, attempts)` | `raise RetryExhaustedException("publish", 3)` |
+| `from python_app_exceptions import RetryableError` | `RetryableError(message, retry_after=None)` | `raise RetryableError("DB timeout", retry_after=5)` |
+
+---
+
+## 3. python-infrastructure-exceptions
+
+| Import | Signature | Example |
+|--------|------------|---------|
+| `from python_infrastructure_exceptions import InfrastructureException` | `InfrastructureException(message, details=None)` | `raise InfrastructureException("Connection failed")` |
+| `from python_infrastructure_exceptions import DatabaseError` | `DatabaseError(message, details=None, query=None)` | `raise DatabaseError("pool exhausted", query="SELECT...")` |
+| `from python_infrastructure_exceptions import ExternalServiceError` | (inherits `InfrastructureException`) | `raise ExternalServiceError("API timeout")` |
+| `from python_infrastructure_exceptions import ConfigurationError` | (inherits `InfrastructureException`) | `raise ConfigurationError("Missing DB_URL")` |
+| `from python_infrastructure_exceptions import CacheError` | (inherits `InfrastructureException`) | `raise CacheError("Redis down")` |
+| `from python_infrastructure_exceptions import MessageQueueError` | (inherits `InfrastructureException`) | `raise MessageQueueError("Kafka unavailable")` |
+
+---
+
+## 4. python-input-validation
+
+| Import | Signature | Example |
+|--------|------------|---------|
+| `from python_input_validation import validate_email_format` | `validate_email_format(email: str) -> bool` | `if not validate_email_format(addr): raise ...` |
+| `from python_input_validation import validate_string_length` | `validate_string_length(text, min_length?, max_length?) -> bool` | `validate_string_length(name, max_length=100)` |
+| `from python_input_validation import sanitize_email` | `sanitize_email(email: str) -> str` | `addr = sanitize_email(input)` |
+| `from python_input_validation import sanitize_text_input` | `sanitize_text_input(text, max_length?) -> str` | `safe = sanitize_text_input(text, max_length=255)` |
+
+---
+
+## 5. postgres-data-sanitizers
+
+| Import | Signature | Example |
+|--------|------------|---------|
+| `from postgres_data_sanitizers import escape_null_chars` | `escape_null_chars(text: str) -> str` | `safe = escape_null_chars(raw)` |
+| `from postgres_data_sanitizers import unescape_null_chars` | `unescape_null_chars(text: str) -> str` | `restored = unescape_null_chars(safe)` |
+| `from postgres_data_sanitizers import sanitize_dict_for_postgres` | `sanitize_dict_for_postgres(data: Dict) -> Dict` | `safe_dict = sanitize_dict_for_postgres(payload)` |
+| `from postgres_data_sanitizers import unescape_dict_from_postgres` | `unescape_dict_from_postgres(data: Dict) -> Dict` | `restored = unescape_dict_from_postgres(row)` |
+| `from postgres_data_sanitizers import validate_postgres_text` | `validate_postgres_text(text?: str) -> str?` | `valid = validate_postgres_text(user_input)` |
+| `from postgres_data_sanitizers import contains_surrogates` | `contains_surrogates(text: str) -> bool` | `if contains_surrogates(s): raise ...` |
+
+---
+
+## 6. sqlalchemy-async-session-factory
+
+| Import | Signature | Example |
+|--------|------------|---------|
+| `from sqlalchemy_async_session_factory import create_async_engine_with_pool` | `create_async_engine_with_pool(url, echo?, pool_size?, max_overflow?, ...) -> AsyncEngine` | `engine = create_async_engine_with_pool("postgresql+asyncpg://...")` |
+| `from sqlalchemy_async_session_factory import create_async_session_maker` | `create_async_session_maker(engine, expire_on_commit?) -> async_sessionmaker` | `SessionLocal = create_async_session_maker(engine)` |
+| `from sqlalchemy_async_session_factory import create_session_dependency` | `create_session_dependency(session_maker) -> Callable` | `get_db = create_session_dependency(SessionLocal); Depends(get_db)` |
+| `from sqlalchemy_async_session_factory import setup_pool_event_handlers` | `setup_pool_event_handlers(engine: AsyncEngine)` | `setup_pool_event_handlers(engine)` |
+| `from sqlalchemy_async_session_factory import suppress_pool_warnings` | `suppress_pool_warnings()` | `suppress_pool_warnings()` |
+
+---
+
+## 7. python-structlog-config
+
+| Import | Signature | Example |
+|--------|------------|---------|
+| `from python_structlog_config import configure_structlog` | `configure_structlog(log_level?, json_output?, enable_otel?, enable_sentry?, ...)` | `configure_structlog(log_level="INFO", json_output=True)` |
+| `from python_structlog_config import get_logger` | `get_logger(name?)` | `logger = get_logger(__name__); logger.info("msg")` |
+| `from python_structlog_config import configure_for_development` | `configure_for_development(service_name)` | `configure_for_development("my-api")` |
+| `from python_structlog_config import configure_for_production` | `configure_for_production(service_name, sentry_dsn?, log_level?)` | `configure_for_production("api", sentry_dsn="...")` |
+| `from python_structlog_config import configure_for_testing` | `configure_for_testing(service_name)` | `configure_for_testing("my-api")` |
+
+---
+
+## 8. python-cqrs-core
+
+| Import | Signature | Example |
+|--------|------------|---------|
+| `from python_cqrs_core import ICommand, ICommandHandler` | `ICommand` marker; `ICommandHandler[TCommand, TResult]` with `async def handle(self, command)` | `class CreateCmd(BaseModel, ICommand): ...` |
+| `from python_cqrs_core import IQuery, IQueryHandler` | `IQuery` marker; `IQueryHandler[TQuery, TResult]` with `async def handle(self, query)` | `class GetUserQuery(BaseModel, IQuery): user_id: int` |
+| `from python_cqrs_core import BaseCommand` | Pydantic: `request_id`, `correlation_id`, `requested_by`, `requested_at` | `class CreateUser(BaseCommand): name: str; email: str` |
+| `from python_cqrs_core import BaseQuery, PaginatedQuery` | `BaseQuery` + tracing; `PaginatedQuery` adds `page`, `page_size`, `offset` | `class ListQ(PaginatedQuery): pass; q.offset` |
+
+---
+
+## 9. python-mediator
+
+| Import | Signature | Example |
+|--------|------------|---------|
+| `from python_mediator import Mediator` | `Mediator()`; `register_handler(type, handler)`; `async send(request)`; `add_pipeline_behavior(fn)` | `m = Mediator(); m.register_handler(Cmd, Handler()); r = await m.send(Cmd())` |
+| `from python_mediator import PipelineBehavior` | Protocol for pipeline behavior | `class MyBehavior(PipelineBehavior): ...` |
+| `from python_mediator import LoggingBehavior` | `handle(request, next)` | `m.add_pipeline_behavior(LoggingBehavior().handle)` |
+| `from python_mediator import TimingBehavior` | `handle(request, next)` | `m.add_pipeline_behavior(TimingBehavior().handle)` |
+| `from python_mediator import ValidationBehavior` | `handle(request, next)` | `m.add_pipeline_behavior(ValidationBehavior().handle)` |
+
+---
+
+## 10. python-cqrs-dispatcher
+
+| Import | Signature | Example |
+|--------|------------|---------|
+| `from python_cqrs_dispatcher import CQRSDispatcher` | `register_command_handler(type, handler)`; `register_query_handler(...)`; `async send_command(cmd)`; `async send_query(query)`; `add_pipeline_behavior(fn)` | `d = CQRSDispatcher(); d.register_command_handler(CreateCmd, H()); r = await d.send_command(cmd)` |
+| `from python_cqrs_dispatcher import register_handlers` | `register_handlers(dispatcher, [(Cmd, Handler), ...])` | `register_handlers(d, [(CreateCmd, H1), (GetQ, H2)])` |
+| `from python_cqrs_dispatcher import auto_register_handlers` | `auto_register_handlers(dispatcher, module)` | `auto_register_handlers(d, my_app.handlers)` |
+
+---
+
+## 11. python-dto-mappers
+
+| Import | Signature | Example |
+|--------|------------|---------|
+| `from python_dto_mappers import Mapper, BaseMapper` | Protocol `map(source)->target`; `BaseMapper[TSource, TTarget]` | `class UserMapper(BaseMapper[ORM, DTO]): def map(self, s): return DTO(...)` |
+| `from python_dto_mappers import AutoMapper` | `AutoMapper(source_type, target_type, exclude?)`; `add_transform(field, fn)`; `map(source)` | `m = AutoMapper(ORM, DTO); dto = m.map(orm)` |
+| `from python_dto_mappers import auto_map` | `@auto_map(Source, Target, exclude?)` class decorator | `@auto_map(UserORM, UserDTO) class UserMapper: ...` |
+| `from python_dto_mappers import field_transform` | `@field_transform(field_name)` decorator | `@field_transform("date") def f(self, s): ...` |
+| `from python_dto_mappers import to_upper, to_lower, to_sentence_case, to_title_case` | `(text: str) -> str` | `to_upper("hello")` |
+| `from python_dto_mappers import map_datetime_to_iso, map_iso_to_datetime` | `(dt?) -> str?`, `(iso_str?) -> datetime?` | `map_datetime_to_iso(dt)` |
+| `from python_dto_mappers import map_nested_object` | `map_nested_object(obj, mapper)` | `map_nested_object(addr, AddressMapper())` |
+| `from python_dto_mappers import extract_changed_fields, chain_map` | `extract_changed_fields(orig, dto, exclude?)`; `chain_map(source, through: [Type])` | `changed = extract_changed_fields(user, update_dto)` |
+
+---
+
+## 12. pydantic-response-models
+
+| Import | Signature | Example |
+|--------|------------|---------|
+| `from pydantic_response_models import SuccessResponse` | `SuccessResponse[T](data, message?)` | `return SuccessResponse(data=user)` |
+| `from pydantic_response_models import ErrorDetail, ErrorResponse` | `ErrorDetail(field?, message, code?)`; `ErrorResponse(error, details?, code?)` | `return ErrorResponse(error="Not found")` |
+| `from pydantic_response_models import PaginatedResponse` | `PaginatedResponse[T](items, total, page, page_size, pages)` | `return PaginatedResponse(items=[...], total=100, page=1, page_size=10, pages=10)` |
+| `from pydantic_response_models import MessageResponse` | `MessageResponse(message, success?)` | `return MessageResponse(message="Created")` |
+| `from pydantic_response_models import email_field, token_field` | `email_field() -> Field`, `token_field() -> Field` | `email: str = email_field()` |
+
+---
+
+## 13. sqlalchemy-async-repositories
+
+| Import | Signature | Example |
+|--------|------------|---------|
+| `from sqlalchemy_async_repositories import IRepository` | Protocol: `get_by_id`, `create`, `update`, `delete`, `get_all`, `exists`, `count` | `class Repo(IRepository[User]): ...` |
+| `from sqlalchemy_async_repositories import BaseRepository` | `BaseRepository(db_session, model_class)`; `async get_by_id`, `get_all`, `exists`, `count`, `create`, `update`, `delete`, `find_paginated` | `repo = BaseRepository(session, User); u = await repo.get_by_id(1)` |
+| `from sqlalchemy_async_repositories import FilterSpec, SortSpec` | `FilterSpec(field, operator, value)`; `SortSpec(field, direction?)` | `FilterSpec("status", "eq", "active")` |
+| `from sqlalchemy_async_repositories import PaginatedResult` | `PaginatedResult[T](items, total, page, page_size, pages, has_next, has_prev)` | `r = await repo.find_paginated(page=1, filters=[...])` |
+| `from sqlalchemy_async_repositories import has_fastcrud` | `has_fastcrud() -> bool` | `if has_fastcrud(): ...` |
+| `from sqlalchemy_async_repositories import IPaginationStrategy` | Pagination strategy protocol | `class MyStrategy(IPaginationStrategy): ...` |
+
+---
+
+## 14. fastapi-config-patterns
+
+| Import | Signature | Example |
+|--------|------------|---------|
+| `from fastapi_config_patterns import BaseFastAPISettings` | Pydantic settings: `debug`, `api_v1_str`, `host`, `port`, `allowed_origins`, `cors_*` | `class Settings(BaseFastAPISettings): app_name: str` |
+| `from fastapi_config_patterns import BaseDatabaseSettings` | Pydantic: `database_url` | `class Settings(BaseFastAPISettings, BaseDatabaseSettings): pass` |
+| `from fastapi_config_patterns import assemble_cors_origins` | `assemble_cors_origins(v: str | List[str]) -> List[str]` | `@field_validator("allowed_origins")(assemble_cors_origins)` |
+
+---
+
+## 15. fastapi-middleware-toolkit
+
+| Import | Signature | Example |
+|--------|------------|---------|
+| `from fastapi_middleware_toolkit import setup_cors_middleware` | `setup_cors_middleware(app, allowed_origins, allow_credentials?, allowed_methods?, ...)` | `setup_cors_middleware(app, ["http://localhost:3000"])` |
+| `from fastapi_middleware_toolkit import setup_error_handlers` | `setup_error_handlers(app, custom_exception_class?)` | `setup_error_handlers(app, BaseApplicationException)` |
+| `from fastapi_middleware_toolkit import create_lifespan_manager` | `create_lifespan_manager(on_startup?, on_shutdown?, service_name?, service_version?)` | `app = FastAPI(lifespan=create_lifespan_manager(on_startup=init_db))` |
+| `from fastapi_middleware_toolkit import create_health_check_endpoint` | `create_health_check_endpoint(service_name, version?, additional_checks?)` | `app.get("/health")(create_health_check_endpoint("api"))` |
+| `from fastapi_middleware_toolkit import setup_cache_control_middleware` | `setup_cache_control_middleware(app, default_cache_control?)` | `setup_cache_control_middleware(app, "no-store")` |
+| `from fastapi_middleware_toolkit import CacheControlMiddleware` | `CacheControlMiddleware(app, default_cache_control?)` | `app.add_middleware(CacheControlMiddleware, default_cache_control="...")` |
+
+---
+
+## 16. python-outbox-core
+
+| Import | Signature | Example |
+|--------|------------|---------|
+| `from python_outbox_core import IOutboxEvent` | Pydantic ABC: `event_id`, `event_type`, `aggregate_id`, `occurred_at`, `source`; `to_message()`, `get_partition_key()` | `class InviteCreated(IOutboxEvent): ...` |
+| `from python_outbox_core import IOutboxRepository` | ABC: `add_event`, `get_unpublished`, `mark_published`, `count_unpublished`, `mark_failed` | `class OutboxRepo(IOutboxRepository): ...` |
+| `from python_outbox_core import IEventPublisher` | ABC: `async publish(message: dict)` | `class KafkaPub(IEventPublisher): async def publish(self, m): ...` |
+| `from python_outbox_core import IEventFormatter, CloudEventsFormatter` | `format(event) -> dict`; `CloudEventsFormatter(source, data_content_type?)` | `formatter = CloudEventsFormatter("my-service")` |
+| `from python_outbox_core import OutboxPublisherBase` | ABC: `__init__(repo, publisher, error_handler?, metrics?)`; `async publish_batch(limit?)`; abstract `schedule_publishing()` | `class Worker(OutboxPublisherBase): async def schedule_publishing(self): ...` |
+| `from python_outbox_core import OutboxErrorHandler, OutboxMetrics` | Error handling and metrics for outbox worker | `OutboxErrorHandler().handle(event, exc)` |
+| `from python_outbox_core import OutboxConfig` | Pydantic: `batch_size`, `poll_interval_seconds`, `max_retry_count`, etc. | `cfg = OutboxConfig(batch_size=50)` |
+| `from python_outbox_core import OutboxHealthCheck, HealthStatus` | ABC `check_health()`; `HealthStatus.HEALTHY | DEGRADED | UNHEALTHY` | `class HC(OutboxHealthCheck): async def check_health(self): ...` |

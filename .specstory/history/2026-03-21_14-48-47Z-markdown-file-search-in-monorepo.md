@@ -2,7 +2,7 @@
 
 # 2026-03-21 14:48:47Z
 
-<!-- cursoride Session c00dfcf5-a11e-4393-9fb1-139693bb3425 (2026-03-21 14:48:47Z) -->
+<!-- cursoride Session task-220ae307-7102-40f3-b7d3-aa6656d2be3d (2026-03-21 14:48:47Z) -->
 
 _**User**_
 
@@ -469,3 +469,107 @@ _**Agent (composer-1.5)**_
 <summary>Tool use: **read_file_v2**</summary>
 
 </details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+
+
+
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-outbox-core\detailed-docs\faq\SERIALIZATION_NOTES.md</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\python-outbox-core\src\python_outbox_core\adapters\examples\README.md</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+
+Here are all `.md` files in `packages/`, excluding `tests/`, `node_modules/`, `dist/`, and `build/`:
+
+---
+
+## Packages with only README
+
+| Path | First 5 lines |
+|------|----------------|
+| `c:\coding\gridflow\python-web-toolkit\packages\python-app-exceptions\README.md` | `# python-app-exceptions`<br>`Base exception hierarchy for Python web applications.`<br>`## Installation` |
+| `c:\coding\gridflow\python-web-toolkit\packages\postgres-data-sanitizers\README.md` | `# postgres-data-sanitizers`<br>`PostgreSQL-specific data sanitization (null chars, surrogates).`<br>`## Installation` |
+| `c:\coding\gridflow\python-web-toolkit\packages\python-infrastructure-exceptions\README.md` | `# python-infrastructure-exceptions`<br>`Infrastructure layer exception classes for Python applications.`<br>`**Purpose:** Low-level infrastructure errors...` |
+| `c:\coding\gridflow\python-web-toolkit\packages\python-technical-primitives\README.md` | `# python-technical-primitives`<br>`General-purpose Python utilities (datetime, text, patterns).`<br>`## Installation` |
+| `c:\coding\gridflow\python-web-toolkit\packages\python-dto-mappers\README.md` | `# Python DTO Mappers`<br>`Reusable DTO mapping patterns with type safety and auto-mapping functionality.`<br>`## Installation` |
+| `c:\coding\gridflow\python-web-toolkit\packages\pydantic-response-models\README.md` | `# pydantic-response-models`<br>`Standard API response DTOs using Pydantic (framework-agnostic).`<br>`## Installation` |
+| `c:\coding\gridflow\python-web-toolkit\packages\python-input-validation\README.md` | `# python-input-validation`<br>`Business-level input validation and sanitization for Python applications.`<br>`## Installation` |
+| `c:\coding\gridflow\python-web-toolkit\packages\sqlalchemy-async-session-factory\README.md` | `# SQLAlchemy Async Session Factory`<br>`Factory functions for SQLAlchemy async engine and session management...` |
+
+---
+
+## Packages with extra docs
+
+### python-cqrs-core
+- `packages\python-cqrs-core\README.md` — `# Python CQRS Core Documentation` / `Welcome to the Python CQRS Core documentation!` / `## Quick Links`
+- `packages\python-cqrs-core\docs\api-reference.md` — `# API Reference` / `## Interfaces` / `### ICommand`
+- `packages\python-cqrs-core\docs\why-use-base-classes.md` — `# Why Use BaseQuery/BaseCommand?` / `## Overview` / `While BaseQuery and BaseCommand extend Pydantic's BaseModel...`
+- `packages\python-cqrs-core\docs\observability.md` — `# Observability Integration` / `## Overview` / `BaseQuery and BaseCommand are designed to work seamlessly with modern observability tools...`
+- `packages\python-cqrs-core\docs\usage-guide.md` — `# Usage Guide` / `Complete guide to using Python CQRS Core in your applications.` / `## Commands`
+
+### sqlalchemy-async-repositories
+- `packages\sqlalchemy-async-repositories\README.md` — `# SQLAlchemy Async Repositories` / `**Async repository pattern with hybrid pagination approach.**` / `## 🎯 Features`
+- `packages\sqlalchemy-async-repositories\ARCHITECTURE.md` — `# Architecture: Design Patterns & Interactions` / `## Overview` / `This library combines multiple design patterns...`
+- `packages\sqlalchemy-async-repositories\REFACTORING_SUMMARY_FACTORY_PATTERN.md` — `# Refactoring Summary: Explicit Factory Pattern` / `## ✅ What Was Implemented` / `### **Goal:** Make Factory Pattern explicit...`
+- `packages\sqlalchemy-async-repositories\HYBRID_IMPLEMENTATION_SUMMARY.md` — `# Hybrid Repository Implementation Summary` / `## ✅ What Was Implemented` / `### **Hybrid Approach Architecture**`
+- `packages\sqlalchemy-async-repositories\MISSED FROM ARCHITECTURE.md` — `NOTHING ALLOWED TO BE SKIPPED EXCEPT DIAGRAM AND REALLY DEPRECATED PARTS...` / `# Hybrid Repository Architecture`
+
+### python-outbox-core
+- `packages\python-outbox-core\README.md` — `# Python Outbox Core` / `**Core abstractions for implementing the Transactional Outbox pattern...**` / `## 📦 What is this?`
+- `packages\python-outbox-core\QUICKREF.md` — `# Outbox Core - Quick Reference` / `**NOTE:** No custom serializer! Use Pydantic's model_dump_json() & model_validate_json()...`
+- `packages\python-outbox-core\detailed-docs\API_REFERENCE.md` — `# Outbox Core - API Quick Reference` / `**Version:** 0.1.0 \| **Status:** ✅ Production Ready`
+- `packages\python-outbox-core\detailed-docs\IMPLEMENTATION_GUIDE.md` — `# Transactional Outbox Implementation Guide` / `## ✅ Pre-Implementation Checklist`
+- `packages\python-outbox-core\detailed-docs\faq\OUTBOX_VS_TASK_QUEUES.md` — `# Do we even need python-outbox-core if we use FastStream?` / `### **TL;DR: they all solve DIFFERENT problems.**`
+- `packages\python-outbox-core\detailed-docs\faq\SERIALIZATION_NOTES.md` — `# Serialization Notes` / `## ❓ Why No Custom Serializer?` / `**Short answer:** Pydantic v2 and FastStream already handle everything.`
+- `packages\python-outbox-core\src\python_outbox_core\adapters\examples\README.md` — `# Outbox Core - Extensibility Examples` / `This directory contains **minimal examples** demonstrating extensibility patterns.`
+
+### Other (README + comparison at packages root)
+- `packages\fastapi-middleware-toolkit\README.md` — `# FastAPI Middleware Toolkit` / `Reusable FastAPI middleware setup functions...`
+- `packages\fastapi-config-patterns\README.md` — `# FastAPI Config Patterns` / `Reusable Pydantic settings classes...`
+- `packages\python-cqrs-dispatcher\README.md` — `# Python CQRS Dispatcher` / `CQRS dispatcher that integrates python-cqrs-core with python-mediator...`
+- `packages\python-mediator\README.md` — `# Python Mediator` / `Generic mediator pattern implementation...`
+- `packages\python-domain-events\README.md` — `# Python Domain Events` / `**Base classes for internal domain events with distributed tracing support**`
+- `packages\python-structlog-config\README.md` — `# Python Structlog Config` / `Structured logging configuration with optional OpenTelemetry and Sentry integration.`
+- `packages\EXCEPTION_LIBRARIES_COMPARISON.md` — `# Exception Libraries Comparison` / `## Two Separate Libraries for Two Layers` (cross-package comparison)
+
+---
+
+## Summary
+
+**README only (8):**  
+python-app-exceptions, postgres-data-sanitizers, python-infrastructure-exceptions, python-technical-primitives, python-dto-mappers, pydantic-response-models, python-input-validation, sqlalchemy-async-session-factory.
+
+**Beyond README (3 packages + 1 cross-package doc):**
+- **python-cqrs-core** – README + 4 docs under `docs/` (api-reference, why-use-base-classes, observability, usage-guide)
+- **sqlalchemy-async-repositories** – README + 4 docs (ARCHITECTURE, REFACTORING_SUMMARY_FACTORY_PATTERN, HYBRID_IMPLEMENTATION_SUMMARY, MISSED FROM ARCHITECTURE)
+- **python-outbox-core** – README + QUICKREF + `detailed-docs/` (API_REFERENCE, IMPLEMENTATION_GUIDE, faq/OUTBOX_VS_TASK_QUEUES, faq/SERIALIZATION_NOTES) + examples README
+- **packages/** – EXCEPTION_LIBRARIES_COMPARISON.md (shared doc)
+
+**Excluded:**  
+`packages/postgres-data-sanitizers/tests/null_escape/TEST_POSTGRES_VALIDATORS_SUMMARY.md` (inside `tests/`).
