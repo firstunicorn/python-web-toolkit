@@ -7,6 +7,434 @@
 
 Comprehensive Python web development toolkit organized as a monorepo with 16 independent micro-libraries.
 
+## What each library solves
+
+<details>
+<summary><b>python-input-validation</b> — email/string validation</summary>
+
+BEFORE:
+```python
+import re
+
+def validate_email(email: str) -> bool:
+    pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+    return bool(re.match(pattern, email))
+
+def sanitize(text: str, max_len: int) -> str:
+    return text.strip()[:max_len].replace('\x00', '')
+```
+
+AFTER:
+```python
+from python_input_validation import validate_email_format, sanitize_text_input
+
+valid = validate_email_format(email)
+safe = sanitize_text_input(raw_input, max_length=255)
+```
+</details>
+
+<details>
+<summary><b>sqlalchemy-async-repositories</b> — generic async CRUD</summary>
+
+BEFORE:
+```python
+async def get_user(db: AsyncSession, user_id: int) -> User | None:
+    result = await db.execute(select(User).where(User.id == user_id))
+    return result.scalar_one_or_none()
+
+async def get_users(db: AsyncSession, page: int, size: int) -> list[User]:
+    result = await db.execute(select(User).offset((page-1)*size).limit(size))
+    return list(result.scalars().all())
+# repeat for every entity...
+```
+
+AFTER:
+```python
+from sqlalchemy_async_repositories import BaseRepository, FilterSpec
+
+repo = BaseRepository(session, User)
+user = await repo.get_by_id(1)
+page = await repo.find_paginated(page=1, filters=[FilterSpec("status", "eq", "active")])
+```
+</details>
+
+<details>
+<summary><b>sqlalchemy-async-session-factory</b> — async engine/session setup</summary>
+
+BEFORE:
+```python
+from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncSession
+
+engine = create_async_engine(
+    DATABASE_URL, echo=False, pool_size=5,
+    max_overflow=10, pool_recycle=3600,
+    pool_pre_ping=True,
+)
+SessionLocal = async_sessionmaker(engine, expire_on_commit=False, class_=AsyncSession)
+
+async def get_db():
+    async with SessionLocal() as session:
+        yield session
+```
+
+AFTER:
+```python
+from sqlalchemy_async_session_factory import (
+    create_async_engine_with_pool, create_async_session_maker, create_session_dependency,
+)
+
+engine = create_async_engine_with_pool("postgresql+asyncpg://...")
+SessionLocal = create_async_session_maker(engine)
+get_db = create_session_dependency(SessionLocal)
+```
+</details>
+
+<details>
+<summary><b>python-structlog-config</b> — structured logging presets</summary>
+
+BEFORE:
+```python
+import logging
+import structlog
+
+structlog.configure(
+    processors=[
+        structlog.contextvars.merge_contextvars,
+        structlog.processors.add_log_level,
+        structlog.processors.TimeStamper(fmt="iso"),
+        structlog.dev.ConsoleRenderer(),  # dev only, must swap for prod
+    ],
+    wrapper_class=structlog.make_filtering_bound_logger(logging.INFO),
+)
+logger = structlog.get_logger()
+```
+
+AFTER:
+```python
+from python_structlog_config import configure_for_development, get_logger
+
+configure_for_development("my-api")
+logger = get_logger(__name__)
+```
+</details>
+
+<details>
+<summary><b>fastapi-middleware-toolkit</b> — middleware one-liner setup</summary>
+
+BEFORE:
+```python
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware, allow_origins=["*"],
+    allow_credentials=True, allow_methods=["*"], allow_headers=["*"],
+)
+
+@app.exception_handler(Exception)
+async def handler(request, exc):
+    return JSONResponse(status_code=500, content={"error": str(exc)})
+
+@asynccontextmanager
+async def lifespan(app):
+    await init_db()
+    yield
+    await close_db()
+```
+
+AFTER:
+```python
+from fastapi_middleware_toolkit import setup_cors_middleware, setup_error_handlers, create_lifespan_manager
+
+setup_cors_middleware(app, ["http://localhost:3000"])
+setup_error_handlers(app)
+app = FastAPI(lifespan=create_lifespan_manager(on_startup=init_db, on_shutdown=close_db))
+```
+</details>
+
+<details>
+<summary><b>python-mediator</b> — mediator with pipeline behaviors</summary>
+
+BEFORE:
+```python
+# every handler call needs manual logging, timing, validation
+import time
+logger.info(f"Handling {command}")
+start = time.time()
+validate(command)
+result = await handler.handle(command)
+logger.info(f"Done in {time.time() - start:.2f}s")
+```
+
+AFTER:
+```python
+from python_mediator import Mediator, LoggingBehavior, TimingBehavior
+
+mediator = Mediator()
+mediator.add_pipeline_behavior(LoggingBehavior().handle)
+mediator.add_pipeline_behavior(TimingBehavior().handle)
+result = await mediator.send(command)  # logging + timing automatic
+```
+</details>
+
+<details>
+<summary><b>python-cqrs-core</b> — command/query separation</summary>
+
+BEFORE:
+```python
+# business logic mixed into route handler
+@app.post("/users")
+async def create_user(data: UserCreate, db: Session = Depends(get_db)):
+    if await db.execute(select(User).where(User.email == data.email)):
+        raise HTTPException(409)
+    user = User(**data.dict())
+    db.add(user)
+    await db.commit()
+    return user
+```
+
+AFTER:
+```python
+from python_cqrs_core import BaseCommand, ICommandHandler
+
+class CreateUser(BaseCommand):
+    name: str
+    email: str
+
+class CreateUserHandler(ICommandHandler[CreateUser, User]):
+    async def handle(self, command: CreateUser) -> User: ...
+
+# route is just a thin adapter, logic lives in handler
+```
+</details>
+
+<details>
+<summary><b>python-dto-mappers</b> — auto DTO mapping</summary>
+
+BEFORE:
+```python
+def to_dto(user: UserORM) -> UserDTO:
+    return UserDTO(
+        id=user.id,
+        name=user.name,
+        email=user.email,
+        created_at=user.created_at.isoformat() if user.created_at else None,
+    )
+# repeat for every entity...
+```
+
+AFTER:
+```python
+from python_dto_mappers import AutoMapper
+
+mapper = AutoMapper(UserORM, UserDTO)
+mapper.add_transform("created_at", lambda dt: dt.isoformat() if dt else None)
+dto = mapper.map(user_orm)  # fields matched by name automatically
+```
+</details>
+
+<details>
+<summary><b>fastapi-config-patterns</b> — typed settings from env</summary>
+
+BEFORE:
+```python
+import os
+
+DATABASE_URL = os.getenv("DATABASE_URL", "")
+DEBUG = os.getenv("DEBUG", "false").lower() == "true"
+CORS_ORIGINS = os.getenv("CORS_ORIGINS", "").split(",")
+PORT = int(os.getenv("PORT", "8000"))
+# no validation, no type safety, silent failures on typos
+```
+
+AFTER:
+```python
+from fastapi_config_patterns import BaseFastAPISettings, BaseDatabaseSettings
+
+class Settings(BaseFastAPISettings, BaseDatabaseSettings):
+    app_name: str = "my-api"
+# debug, port, cors_origins, database_url — typed, validated, from .env
+```
+</details>
+
+<details>
+<summary><b>python-app-exceptions</b> — typed exception hierarchy</summary>
+
+BEFORE:
+```python
+# scattered across codebase, no structure
+raise Exception("User not found")
+# caller has no idea what to catch
+try:
+    get_user(id)
+except Exception:  # catches everything, even bugs
+    return 404
+```
+
+AFTER:
+```python
+from python_app_exceptions import BusinessLogicError, ValidationError
+
+raise BusinessLogicError("duplicate_email")
+raise ValidationError("email", "not@valid")
+# caller catches exactly what they need
+```
+</details>
+
+<details>
+<summary><b>python-infrastructure-exceptions</b> — infra failure types</summary>
+
+BEFORE:
+```python
+try:
+    await db.execute(query)
+except Exception as e:
+    if "connection" in str(e).lower():
+        # guess if it's DB, cache, or queue...
+        log.error(f"Something failed: {e}")
+```
+
+AFTER:
+```python
+from python_infrastructure_exceptions import DatabaseError, CacheError
+
+raise DatabaseError("pool exhausted", query="SELECT ...")
+raise CacheError("Redis connection refused")
+# each infra layer has its own exception — no guessing
+```
+</details>
+
+<details>
+<summary><b>python-technical-primitives</b> — datetime/text/specification</summary>
+
+BEFORE:
+```python
+from datetime import datetime, timezone, timedelta
+
+now = datetime.now(timezone.utc)
+expiry = now + timedelta(days=7)
+is_expired = datetime.now(timezone.utc) > expiry
+iso = now.isoformat()
+```
+
+AFTER:
+```python
+from python_technical_primitives.datetime import utc_now, add_days, is_expired, to_iso_string
+
+now = utc_now()
+expiry = add_days(now, 7)
+expired = is_expired(expiry)
+iso = to_iso_string(now)
+```
+</details>
+
+<details>
+<summary><b>postgres-data-sanitizers</b> — null chars/surrogates</summary>
+
+BEFORE:
+```python
+# crashes on insert: "invalid byte sequence for encoding UTF8: 0x00"
+data = {"bio": user_input}  # may contain \x00 or surrogates
+await session.execute(insert(User).values(**data))  # 💥 DataError
+```
+
+AFTER:
+```python
+from postgres_data_sanitizers import sanitize_dict_for_postgres
+
+safe = sanitize_dict_for_postgres({"bio": user_input})
+await session.execute(insert(User).values(**safe))  # null chars stripped
+```
+</details>
+
+<details>
+<summary><b>python-cqrs-dispatcher</b> — auto command/query routing</summary>
+
+BEFORE:
+```python
+# manual wiring in every endpoint
+if isinstance(request, CreateUserCommand):
+    result = await create_user_handler.handle(request)
+elif isinstance(request, GetUserQuery):
+    result = await get_user_handler.handle(request)
+# grows with every new command/query...
+```
+
+AFTER:
+```python
+from python_cqrs_dispatcher import CQRSDispatcher
+
+dispatcher = CQRSDispatcher()
+dispatcher.register_command_handler(CreateUserCommand, CreateUserHandler())
+dispatcher.register_query_handler(GetUserQuery, GetUserHandler())
+result = await dispatcher.send_command(cmd)  # auto-routes by type
+```
+</details>
+
+<details>
+<summary><b>pydantic-response-models</b> — uniform API responses</summary>
+
+BEFORE:
+```python
+# inconsistent response shapes across endpoints
+return {"data": user, "status": "ok"}           # endpoint A
+return {"result": users, "count": len(users)}    # endpoint B
+return {"error": "not found", "code": 404}       # endpoint C
+```
+
+AFTER:
+```python
+from pydantic_response_models import SuccessResponse, ErrorResponse, PaginatedResponse
+
+return SuccessResponse(data=user)
+return PaginatedResponse(items=users, total=100, page=1, page_size=10, pages=10)
+return ErrorResponse(error="Not found", code=404)
+```
+</details>
+
+<details>
+<summary><b>python-outbox-core</b> — transactional outbox pattern</summary>
+
+BEFORE:
+```python
+# event lost if app crashes between commit and publish
+await session.commit()
+await kafka.publish({"type": "user.created", "data": user.dict()})  # 💥 crash here = lost event
+```
+
+AFTER:
+```python
+from python_outbox_core import IOutboxEvent, CloudEventsFormatter
+
+class UserCreated(IOutboxEvent):
+    event_type: str = "user.created"
+    user_id: int
+
+# event saved in same DB transaction — published later by outbox worker
+# zero lost events, even on crash
+```
+</details>
+
+### Summary
+
+| Library | BEFORE (without) | AFTER (with) |
+|---------|-------------------|--------------|
+| **python-input-validation** | Manual regex for emails, hand-rolled sanitizers | `validate_email()`, `sanitize_string()` — tested, reusable |
+| **sqlalchemy-async-repositories** | Raw SQL or repeated CRUD per entity | `AsyncRepository[Entity]` — generic CRUD + filtering |
+| **sqlalchemy-async-session-factory** | Copy-paste async engine + session boilerplate per project | `create_engine()` / `create_session()` — one-liner setup |
+| **python-structlog-config** | Raw `print()` or inconsistent logging setup | `configure_logging("dev")` — JSON in prod, colored in dev |
+| **fastapi-middleware-toolkit** | Manual CORS / error handler / lifespan wiring | `setup_middleware(app)` — one call configures everything |
+| **python-mediator** | Direct handler calls, no cross-cutting concerns | `mediator.send(cmd)` with pipeline behaviors (logging, validation) |
+| **python-cqrs-core** | Business logic mixed into route handlers | `Command` / `Query` objects enforce read-write separation |
+| **python-dto-mappers** | Manual `dict → DTO` conversion in every endpoint | `@auto_map` decorator — zero boilerplate mapping |
+| **fastapi-config-patterns** | Scattered `os.getenv()` calls, no validation | Pydantic `Settings` classes with type-safe env loading |
+| **python-app-exceptions** | Bare `raise Exception("...")` scattered everywhere | Typed hierarchy: `NotFoundError`, `ValidationError`, `ConflictError` |
+| **python-infrastructure-exceptions** | Generic `Exception` for DB/cache/storage failures | `DatabaseError`, `CacheError`, `StorageError` with context |
+| **python-technical-primitives** | Re-implementing text/datetime/spec-pattern in every project | Import and use — `slugify()`, `DateRange`, `Specification` |
+| **postgres-data-sanitizers** | Crashes on null chars / surrogates in Postgres writes | Auto-strip before insert — zero silent data corruption |
+| **python-cqrs-dispatcher** | Wiring commands to handlers manually each time | Auto-dispatch: register handler once, dispatcher routes |
+| **pydantic-response-models** | Inconsistent API response shapes across endpoints | `ApiResponse[T]`, `PaginatedResponse[T]` — uniform contract |
+| **python-outbox-core** | Lost events on crash / inconsistent event publishing | Transactional outbox — events saved atomically with data |
+
 ## Project Structure
 
 This toolkit is designed to be integrated into your project as a **subfolder**:
