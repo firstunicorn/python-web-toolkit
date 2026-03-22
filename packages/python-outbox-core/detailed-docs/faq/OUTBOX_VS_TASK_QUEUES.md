@@ -2,8 +2,6 @@
 
 ### **TL;DR: they all solve DIFFERENT problems.**
 
----
-
 ## 📊 **What Each Tool Does**
 
 | Tool | Purpose | What It Provides |

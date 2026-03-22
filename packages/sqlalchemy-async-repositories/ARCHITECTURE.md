@@ -10,7 +10,7 @@ This library combines multiple design patterns to create a flexible, maintainabl
 
 ### High Level Overview
 
-```mermaid
+```text
 graph TD
     A[Client Code] --> B[BaseRepository]
     B --> C[Use Cases]
@@ -35,7 +35,7 @@ graph TD
 
 ### Detailed Level
 
-```plantuml
+```text
 @startuml
 
 !define RECTANGLE class

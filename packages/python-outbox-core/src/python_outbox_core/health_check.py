@@ -35,21 +35,7 @@ class OutboxHealthCheck(ABC):
 
     @abstractmethod
     async def check_health(self) -> Dict[str, Any]:
-        """
-        Perform health check.
-
-        Returns:
-            Health check result with structure:
-            {
-                "status": "healthy" | "degraded" | "unhealthy",
-                "timestamp": "2024-01-01T00:00:00Z",
-                "checks": {
-                    "database": {"status": "healthy"},
-                    "broker": {"status": "healthy"},
-                    "outbox_lag": {"status": "healthy", "pending_count": 0}
-                }
-            }
-        """
+        """Perform health check. Returns dict with status, timestamp, checks."""
         ...
 
     async def check_database(self) -> Dict[str, Any]:
