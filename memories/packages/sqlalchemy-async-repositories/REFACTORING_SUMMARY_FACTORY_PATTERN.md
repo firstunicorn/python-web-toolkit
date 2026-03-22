@@ -4,8 +4,6 @@
 
 ### **Goal:** Make Factory Pattern explicit and document all design patterns
 
----
-
 ## 📁 Files Created/Modified
 
 ### **NEW FILES:**
