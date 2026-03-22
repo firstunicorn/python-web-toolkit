@@ -10,7 +10,13 @@ extensions = [
     "autoapi.extension",
     "myst_parser",
     "sphinx_copybutton",
+    "sphinx_llms_txt",
 ]
+
+llms_txt_summary = """\
+17-package Python monorepo for async web apps with FastAPI,
+SQLAlchemy, CQRS, mediator pattern, and domain-driven design.
+"""
 
 autoapi_dirs = [
     f"../packages/{pkg}/src"

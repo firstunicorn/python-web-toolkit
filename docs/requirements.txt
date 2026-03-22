@@ -3,3 +3,4 @@ sphinx-autoapi>=3.8,<4
 myst-parser>=4.0,<5
 furo>=2025.0
 sphinx-copybutton>=0.5,<1
+sphinx-llms-txt>=0.7,<1
