@@ -17,7 +17,8 @@ Comprehensive Python web development toolkit organized as a monorepo with 17 ind
 **Key benefit:** Those extracted ~500 lines in libraries can now be reused across multiple projects, saving ~65 lines per each use for each micro-library; sixty lines don't sound like much, but imagine if you use several of them and do that a few times per project - it can easily go up to 1000 lines of code in just one project. Add on top of that tests and maintenance - you end up saving hours if not days of work. Bonus is flexibility: use and keep only what you really need right now (with near zero dependencies). We will add new cases and stats and extend the list of components in the future.
 
 <details>
-<summary><b>Examples and real cases of estimated LOC saved per app (those was ultra small apps):</b></summary>
+<summary><b>Examples and real cases of estimated LOC saved per app:</b></summary>
+(those was ultra small apps)
 
 **flow_engine:** ~200-250 lines saved (most repositories, CQRS, exceptions)
 
