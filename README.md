@@ -9,16 +9,20 @@ Comprehensive Python web development toolkit organized as a monorepo with 17 ind
 
 <details>
 <summary><b>Extracted from production backend</b></summary>
+
 **From `backend/src/shared/`:** exceptions/ (base_exceptions.py, business_errors.py, validation.py, retry_logic.py), repositories/ (interfaces.py, base.py), primitives/ (datetime_operations.py, string_operations.py, specification patterns), validators/ (postgres escape/sanitize/validate, string_validators.py), schemas/ (common_fields.py, field_mixins.py), api_contracts/ (common_fields.py, common_responses_dto.py), business_validation/input_validators.py, business_sanitization/input_sanitizers.py. **Total:** ~500 LOC production + 1,085 LOC tests (yes, there are a lot of rigorous tests, because it is shared, universal code).
+
 </details>
 
 **Key benefit:** Those extracted ~500 lines in libraries can now be reused across multiple projects, saving ~65 lines per each use for each micro-library; sixty lines don't sound like much, but imagine if you use several of them and do that a few times per project - it can easily go up to 1000 lines of code in just one project. Add on top of that tests and maintenance - you end up saving hours if not days of work. Bonus is flexibility: use and keep only what you really need right now (with near zero dependencies). We will add new cases and stats and extend the list of components in the future.
 
-## <details>
-<summary><b> Examples and real cases of estimated LOC saved per app (those was ultra small apps):</b></summary>
+<details>
+<summary><b>Examples and real cases of estimated LOC saved per app (those was ultra small apps):</b></summary>
 
 **flow_engine:** ~200-250 lines saved (most repositories, CQRS, exceptions)
+
 **token_generator:** ~150-200 lines saved (full CQRS + events + specifications)
+
 **file_management:** ~100-150 lines saved (infrastructure exceptions + repositories)
 
 **flow_engine saved the most LOC** due to its complex multi-repository architecture.
