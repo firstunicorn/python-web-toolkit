@@ -63,3 +63,6 @@ dmypy.json
 # Sphinx docs
 docs/_build/
 docs/autoapi/
+
+# Playwright MCP
+.playwright-mcp/
