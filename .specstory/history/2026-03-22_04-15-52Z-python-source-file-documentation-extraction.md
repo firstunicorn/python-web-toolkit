@@ -720,4 +720,124 @@ Extraction report for all 6 packages:
 
 ---
 
-**FILE:** python_dto
+**FILE:** python_dto_mappers/auto_mapper.py  
+**MODULE DOC:** Auto-mapping engine for matching fields between models.  
+**CLASSES:** AutoMapper() - Class-based auto-mapper for matching fields.  
+**FUNCTIONS:** (none)  
+**METHODS:** __init__(self, source_type: Type, target_type: Type, exclude: Optional[Set[str]] = None) -> None; _compute_matching_fields(self) -> Set[str] - Compute intersection of source and target fields.; add_transform(self, field: str, func: Any) -> "AutoMapper" - Register a custom transform for a field.; map(self, source: Any) -> Any - Map source instance to target type.; source_type(self) -> Type - Source model type.; target_type(self) -> Type - Target model type.; mapped_fields(self) -> Set[str] - Set of fields being mapped.
+
+---
+
+**FILE:** python_dto_mappers/base.py  
+**MODULE DOC:** Base mapper protocol and class.  
+**CLASSES:** Mapper(Protocol[TSource, TTarget]) - Protocol for type-safe mapping between types.; BaseMapper(Generic[TSource, TTarget]) - Base mapper with common functionality.  
+**FUNCTIONS:** (none)  
+**METHODS:** map(self, source: TSource) -> TTarget - Map source object to target type. (Mapper); __init__(self, source_type: Type[TSource], target_type: Type[TTarget]) -> None - Initialize mapper with type information. (BaseMapper); map(self, source: TSource) -> TTarget - Map source to target. (BaseMapper)
+
+---
+
+**FILE:** python_dto_mappers/decorators.py  
+**MODULE DOC:** Decorators for auto-mapping (syntactic sugar over AutoMapper).  
+**CLASSES:** (none)  
+**FUNCTIONS:** auto_map(source_type: Type, target_type: Type, exclude: Optional[Set[str]] = None) -> Callable - Decorator to auto-generate mapping for matching fields.; field_transform(field_name: str) -> Callable - Mark a method as a field transformation.
+
+---
+
+**FILE:** python_dto_mappers/field_mappers/__init__.py  
+**MODULE DOC:** Field transformation utilities for DTO mapping.  
+**CLASSES:** (none)  
+**FUNCTIONS:** (none)
+
+---
+
+**FILE:** python_dto_mappers/field_mappers/datetime_mapping.py  
+**MODULE DOC:** Datetime to/from ISO 8601 string conversions.  
+**CLASSES:** (none)  
+**FUNCTIONS:** map_datetime_to_iso(dt: Optional[datetime]) -> Optional[str] - Convert datetime to ISO 8601 string.; map_iso_to_datetime(iso_str: Optional[str]) -> Optional[datetime] - Convert ISO 8601 string to datetime.
+
+---
+
+**FILE:** python_dto_mappers/field_mappers/object_mapping.py  
+**MODULE DOC:** Nested object mapping utilities.  
+**CLASSES:** (none)  
+**FUNCTIONS:** map_nested_object(obj: Any, mapper: 'Mapper') -> Any - Map nested object using provided mapper.
+
+---
+
+**FILE:** python_dto_mappers/field_mappers/text_case.py  
+**MODULE DOC:** Text case transformation utilities.  
+**CLASSES:** (none)  
+**FUNCTIONS:** to_upper(text: str) -> str - Convert text to uppercase.; to_lower(text: str) -> str - Convert text to lowercase.; to_sentence_case(text: str) -> str - Convert text to sentence case (first letter uppercase).; to_title_case(text: str) -> str - Convert text to title case (each word capitalized).
+
+---
+
+**FILE:** python_dto_mappers/utils.py  
+**MODULE DOC:** Mapping utilities for partial updates and chaining.  
+**CLASSES:** (none)  
+**FUNCTIONS:** extract_changed_fields(original: BaseModel, update_dto: BaseModel, exclude: Optional[Set[str]] = None) -> Dict[str, Any] - Extract only changed fields for partial updates (PATCH).; chain_map(source: Any, through: List[Type]) -> Any - Chain multiple mappings in sequence.
+
+---
+
+## 5. python-domain-events
+
+**FILE:** python_domain_events/__init__.py  
+**MODULE DOC:** Python Domain Events - Base classes for internal domain events.  
+**CLASSES:** (none)  
+**FUNCTIONS:** (none)
+
+---
+
+**FILE:** python_domain_events/base.py  
+**MODULE DOC:** Base class for internal domain events.  
+**CLASSES:** BaseDomainEvent(BaseModel) - Base class for internal domain events (in-process).  
+**FUNCTIONS:** (none)
+
+---
+
+**FILE:** python_domain_events/dispatcher.py  
+**MODULE DOC:** In-process event dispatcher for domain events.  
+**CLASSES:** InProcessEventDispatcher() - Dispatches domain events to registered handlers in-process.  
+**FUNCTIONS:** (none)  
+**METHODS:** __init__(self) -> None; register(self, event_type: Type[BaseDomainEvent], handler: IDomainEventHandler) -> None - Register a handler for an event type.; dispatch(self, event: BaseDomainEvent) -> None - Dispatch event to all registered handlers.; clear(self) -> None - Clear all registered handlers.
+
+---
+
+**FILE:** python_domain_events/handler.py  
+**MODULE DOC:** Domain event handler interface.  
+**CLASSES:** IDomainEventHandler(ABC, Generic[TEvent]) - Interface for domain event handlers.  
+**FUNCTIONS:** (none)  
+**METHODS:** handle(self, event: TEvent) -> None - Handle a domain event.
+
+---
+
+## 6. python-structlog-config
+
+**FILE:** python_structlog_config/__init__.py  
+**MODULE DOC:** Python Structlog Config - Structured logging configuration.  
+**CLASSES:** (none)  
+**FUNCTIONS:** (none)
+
+---
+
+**FILE:** python_structlog_config/config.py  
+**MODULE DOC:** Core structlog configuration.  
+**CLASSES:** (none)  
+**FUNCTIONS:** configure_structlog(log_level: str = "INFO", json_output: bool = False, enable_otel: bool = False, enable_sentry: bool = False, sentry_dsn: Optional[str] = None, service_name: Optional[str] = None, environment: Optional[str] = None) -> None - Configure structlog with optional OTel and Sentry integration.; get_logger(name: Optional[str] = None) - Get a structlog logger instance.
+
+---
+
+**FILE:** python_structlog_config/integrations.py  
+**MODULE DOC:** Optional integrations for OTel and Sentry.  
+**CLASSES:** (none)  
+**FUNCTIONS:** setup_otel_logging(service_name: Optional[str] = None) -> None - Setup OpenTelemetry logging integration.; setup_sentry_logging(sentry_dsn: str, environment: Optional[str] = None) -> None - Setup Sentry logging integration.
+
+---
+
+**FILE:** python_structlog_config/presets.py  
+**MODULE DOC:** Preset configurations for different environments.  
+**CLASSES:** (none)  
+**FUNCTIONS:** configure_for_development(service_name: str) -> None - Development preset - console output, debug level.; configure_for_production(service_name: str, sentry_dsn: Optional[str] = None, log_level: str = "INFO") -> None - Production preset - JSON output, OTel, optional Sentry.; configure_for_testing(service_name: str) -> None - Testing preset - minimal output, warning level.
+
+---
+
+**Summary:** 31 Python source files across 6 packages, all under 75 lines except `registry.py` (91), `utils.py` (82), `auto_mapper.py` (78), `decorators.py` (69), and `dispatcher.py` (147, in two packages).

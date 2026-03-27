@@ -972,3 +972,606 @@ _**Agent (composer-1.5)**_
 <summary>Tool use: **read_file_v2**</summary>
 
 </details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\sqlalchemy-async-repositories\src\sqlalchemy_async_repositories\use_cases\create\command_model.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+
+
+
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\sqlalchemy-async-repositories\src\sqlalchemy_async_repositories\use_cases\update\__init__.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\sqlalchemy-async-repositories\src\sqlalchemy_async_repositories\use_cases\update\command_handler.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\sqlalchemy-async-repositories\src\sqlalchemy_async_repositories\use_cases\update\command_model.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\sqlalchemy-async-repositories\src\sqlalchemy_async_repositories\use_cases\delete\__init__.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\sqlalchemy-async-repositories\src\sqlalchemy_async_repositories\use_cases\delete\command_handler.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\sqlalchemy-async-repositories\src\sqlalchemy_async_repositories\use_cases\delete\command_model.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\sqlalchemy-async-repositories\src\sqlalchemy_async_repositories\use_cases\find_paginated\__init__.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\sqlalchemy-async-repositories\src\sqlalchemy_async_repositories\use_cases\find_paginated\query_handler.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\sqlalchemy-async-repositories\src\sqlalchemy_async_repositories\use_cases\find_paginated\query_model.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: c:\coding\gridflow\python-web-toolkit\packages\sqlalchemy-async-repositories\src\sqlalchemy_async_repositories\use_cases\find_paginated\strategy_factory.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-1.5)**_
+
+
+Here is the extracted documentation for all Python source files in the five packages:
+
+---
+
+## 1. fastapi-config-patterns/src/
+
+### fastapi_config_patterns/__init__.py
+- **FILE:** fastapi_config_patterns/__init__.py  
+- **MODULE DOC:** FastAPI Config Patterns - Reusable Pydantic settings classes.  
+- **CLASSES:** —  
+- **FUNCTIONS:** —  
+
+### fastapi_config_patterns/base_settings.py
+- **FILE:** fastapi_config_patterns/base_settings.py  
+- **MODULE DOC:** Base FastAPI settings patterns.  
+- **CLASSES:** BaseFastAPISettings(BaseSettings) - Base settings for FastAPI applications.  
+- **FUNCTIONS:** —  
+
+### fastapi_config_patterns/validators.py
+- **FILE:** fastapi_config_patterns/validators.py  
+- **MODULE DOC:** Reusable field validators for Pydantic settings.  
+- **CLASSES:** —  
+- **FUNCTIONS:** assemble_cors_origins(v: Union[str, List[str]]) -> List[str] - Parse CORS origins from string or list.  
+
+### fastapi_config_patterns/database_settings.py
+- **FILE:** fastapi_config_patterns/database_settings.py  
+- **MODULE DOC:** Database settings mixin.  
+- **CLASSES:** BaseDatabaseSettings(BaseSettings) - Database settings mixin for FastAPI applications.  
+- **FUNCTIONS:** —  
+
+---
+
+## 2. fastapi-middleware-toolkit/src/
+
+### fastapi_middleware_toolkit/__init__.py
+- **FILE:** fastapi_middleware_toolkit/__init__.py  
+- **MODULE DOC:** FastAPI Middleware Toolkit - Reusable middleware setup functions.  
+- **CLASSES:** —  
+- **FUNCTIONS:** —  
+
+### fastapi_middleware_toolkit/cache_control.py
+- **FILE:** fastapi_middleware_toolkit/cache_control.py  
+- **MODULE DOC:** Cache-Control middleware for FastAPI applications.  
+- **CLASSES:** CacheControlMiddleware(BaseHTTPMiddleware) - Middleware that sets default Cache-Control headers if not set by route.  
+- **FUNCTIONS:**  
+  - `__init__(self, app, default_cache_control: str = ...)` - (no docstring)  
+  - dispatch(self, request: Request, call_next: Callable) -> Response - Process request and set Cache-Control if not already set.  
+  - setup_cache_control_middleware(app: FastAPI, default_cache_control: str = ...) -> None - Setup Cache-Control middleware for FastAPI application.  
+
+### fastapi_middleware_toolkit/error_handlers.py
+- **FILE:** fastapi_middleware_toolkit/error_handlers.py  
+- **MODULE DOC:** Global error handling middleware for FastAPI applications.  
+- **CLASSES:** —  
+- **FUNCTIONS:** setup_error_handlers(app: FastAPI, custom_exception_class: Optional[Type[Exception]] = None) -> None - Setup global error handlers for the FastAPI application.  
+
+### fastapi_middleware_toolkit/lifespan.py
+- **FILE:** fastapi_middleware_toolkit/lifespan.py  
+- **MODULE DOC:** Lifespan context manager factory for FastAPI applications.  
+- **CLASSES:** —  
+- **FUNCTIONS:**  
+  - create_lifespan_manager(on_startup: Optional[Callable] = None, on_shutdown: Optional[Callable] = None, service_name: str = "api", service_version: str = "1.0.0") -> Callable - Create a lifespan factory for FastAPI application.  
+  - create_health_check_endpoint(service_name: str, version: str = "1.0.0", additional_checks: Optional[Dict[str, Any]] = None) -> Callable - Create a health check endpoint function.  
+
+### fastapi_middleware_toolkit/cors.py
+- **FILE:** fastapi_middleware_toolkit/cors.py  
+- **MODULE DOC:** CORS middleware setup for FastAPI applications.  
+- **CLASSES:** —  
+- **FUNCTIONS:** setup_cors_middleware(app: FastAPI, allowed_origins: Union[str, List[str]], allow_credentials: bool = False, allowed_methods: List[str] = None, allowed_headers: List[str] = None, max_age: int = 600) -> None - Setup CORS middleware with secure defaults.  
+
+---
+
+## 3. python-outbox-core/src/
+
+### python_outbox_core/__init__.py
+- **FILE:** python_outbox_core/__init__.py  
+- **MODULE DOC:** Core abstractions for the Transactional Outbox pattern.  
+- **CLASSES:** —  
+- **FUNCTIONS:** —  
+
+### python_outbox_core/config.py
+- **FILE:** python_outbox_core/config.py  
+- **MODULE DOC:** Configuration for Outbox pattern.  
+- **CLASSES:** OutboxConfig(BaseModel) - Configuration for outbox worker behavior.  
+  - Config - Pydantic config for environment variable support.  
+- **FUNCTIONS:** —  
+
+### python_outbox_core/events.py
+- **FILE:** python_outbox_core/events.py  
+- **MODULE DOC:** Base interface for outbox events.  
+- **CLASSES:** IOutboxEvent(BaseModel, ABC) - Abstract base for all outbox events.  
+  - Config - Pydantic config for event models.  
+- **FUNCTIONS:**  
+  - to_message(self) -> dict[str, Any] - Serialize event to Kafka message format.  
+  - get_partition_key(self) -> str - Return partition key for Kafka routing.  
+
+### python_outbox_core/repository.py
+- **FILE:** python_outbox_core/repository.py  
+- **MODULE DOC:** Repository interface for outbox persistence.  
+- **CLASSES:** IOutboxRepository(ABC) - Abstract repository for outbox event persistence.  
+- **FUNCTIONS:**  
+  - add_event(self, event: IOutboxEvent) -> None  
+  - get_unpublished(self, limit: int = 100, offset: int = 0) -> List[IOutboxEvent]  
+  - mark_published(self, event_id: UUID) -> None  
+  - count_unpublished(self) -> int  
+  - mark_failed(self, event_id: UUID, error_message: str) -> None  
+
+### python_outbox_core/health_check.py
+- **FILE:** python_outbox_core/health_check.py  
+- **MODULE DOC:** Health check interface for outbox monitoring.  
+- **CLASSES:** HealthStatus(str, Enum) - Health status levels.; OutboxHealthCheck(ABC) - Health check for outbox worker.  
+- **FUNCTIONS:**  
+  - check_health(self) -> Dict[str, Any]  
+  - check_database(self) -> Dict[str, Any] - Check if database is reachable.  
+  - check_broker(self) -> Dict[str, Any] - Check if message broker is reachable.  
+  - check_outbox_lag(self) -> Dict[str, Any] - Check outbox processing lag.  
+
+### python_outbox_core/formatters/__init__.py
+- **FILE:** python_outbox_core/formatters/__init__.py  
+- **MODULE DOC:** Event formatters for different message broker formats.  
+- **CLASSES:** —  
+- **FUNCTIONS:** —  
+
+### python_outbox_core/formatters/base.py
+- **FILE:** python_outbox_core/formatters/base.py  
+- **MODULE DOC:** Base event formatter protocol for extensibility.  
+- **CLASSES:** IEventFormatter(Protocol) - Protocol for extensible event formatting (Strategy Pattern).  
+- **FUNCTIONS:** format(self, event: IOutboxEvent) -> Dict[str, Any]; get_content_type(self) -> str  
+
+### python_outbox_core/formatters/cloudevents.py
+- **FILE:** python_outbox_core/formatters/cloudevents.py  
+- **MODULE DOC:** CloudEvents 1.0 formatter for protocol-level standardization.  
+- **CLASSES:** CloudEventsFormatter(IEventFormatter) - Base CloudEvents 1.0 formatter.  
+- **FUNCTIONS:**  
+  - __init__(self, source: str, data_content_type: str = "application/json")  
+  - format(self, event: IOutboxEvent) -> Dict[str, Any] - Format event as CloudEvents 1.0.  
+  - enrich_metadata(self, event_data: Dict[str, Any]) -> Dict[str, Any] - Hook for subclasses to enrich metadata.  
+  - get_content_type(self) -> str - CloudEvents content type.  
+
+### python_outbox_core/adapters/__init__.py
+- **FILE:** python_outbox_core/adapters/__init__.py  
+- **MODULE DOC:** Adapters and examples for python-outbox-core.  
+- **CLASSES:** —  
+- **FUNCTIONS:** —  
+
+### python_outbox_core/adapters/examples/__init__.py
+- **FILE:** python_outbox_core/adapters/examples/__init__.py  
+- **MODULE DOC:** Example adapters demonstrating extensibility patterns.  
+- **CLASSES:** —  
+- **FUNCTIONS:** —  
+
+### python_outbox_core/adapters/examples/kafka_routing.py
+- **FILE:** python_outbox_core/adapters/examples/kafka_routing.py  
+- **MODULE DOC:** Kafka partition key routing example.  
+- **CLASSES:** PartitionKeyRouter - Example: Route events to Kafka partitions by key.; KafkaRoutingFormatter(CloudEventsFormatter) - Example: CloudEvents formatter with Kafka routing metadata.  
+- **FUNCTIONS:** route(self, event: IOutboxEvent) -> tuple - Determine topic and partition key for event.; enrich_metadata(self, event_data: Dict[str, Any]) -> Dict[str, Any] - Add Kafka routing metadata to CloudEvent.  
+
+### python_outbox_core/adapters/examples/kong_simple.py
+- **FILE:** python_outbox_core/adapters/examples/kong_simple.py  
+- **MODULE DOC:** Minimal Kong AI Gateway adapter example.  
+- **CLASSES:** KongSimpleFormatter(CloudEventsFormatter) - Example: Kong AI Gateway CloudEvents formatter.  
+- **FUNCTIONS:** enrich_metadata(self, event_data: Dict[str, Any]) -> Dict[str, Any] - Add Kong-specific metadata to CloudEvent.  
+
+### python_outbox_core/publisher/__init__.py
+- **FILE:** python_outbox_core/publisher/__init__.py  
+- **MODULE DOC:** Publisher components for outbox pattern.  
+- **CLASSES:** —  
+- **FUNCTIONS:** —  
+
+### python_outbox_core/publisher/interface.py
+- **FILE:** python_outbox_core/publisher/interface.py  
+- **MODULE DOC:** Event publisher interface.  
+- **CLASSES:** IEventPublisher(ABC) - Interface for event publishing (Kafka, RabbitMQ, etc.).  
+- **FUNCTIONS:** publish(self, message: dict[str, Any]) -> None - Publish event to message broker.  
+
+### python_outbox_core/publisher/base.py
+- **FILE:** python_outbox_core/publisher/base.py  
+- **MODULE DOC:** Base publisher/worker for outbox event publishing.  
+- **CLASSES:** OutboxPublisherBase(ABC) - Reusable outbox worker logic.  
+- **FUNCTIONS:**  
+  - __init__(self, repository, publisher, error_handler=None, metrics=None)  
+  - publish_batch(self, limit: int = 100) -> int - Fetch and publish a batch of unpublished events.  
+  - _try_publish(self, event) -> bool - Publish one event with error handling.  
+  - schedule_publishing(self) -> None - Implement your scheduling strategy.  
+
+### python_outbox_core/publisher/error_handler.py
+- **FILE:** python_outbox_core/publisher/error_handler.py  
+- **MODULE DOC:** Error handling for outbox event publishing.  
+- **CLASSES:** OutboxErrorHandler - Handles per-event publishing errors.  
+- **FUNCTIONS:**  
+  - __init__(self, logger: Any = None, max_retries: int = 3)  
+  - handle(self, event: Any, exception: Exception) -> None - Log error with full context.  
+  - should_retry(self, event: Any, exception: Exception, attempt: int) -> bool - Decide if event should be retried.  
+  - is_transient_error(self, exception: Exception) -> bool - Check if error is transient (network, timeout, etc.).  
+
+### python_outbox_core/publisher/metrics.py
+- **FILE:** python_outbox_core/publisher/metrics.py  
+- **MODULE DOC:** Metrics and observability for outbox publishing.  
+- **CLASSES:** OutboxMetrics - Structured logging for outbox operations.  
+- **FUNCTIONS:**  
+  - __init__(self, logger: Any = None)  
+  - log_no_events(self) -> None - Log when no events are pending.  
+  - log_success(self, event: Any) -> None - Log successful event publication.  
+  - log_batch_complete(self, published: int, total: int) -> None - Log batch processing completion.  
+  - log_batch_started(self, batch_size: int) -> None - Log batch processing start.  
+
+---
+
+## 4. sqlalchemy-async-session-factory/src/
+
+### sqlalchemy_async_session_factory/__init__.py
+- **FILE:** sqlalchemy_async_session_factory/__init__.py  
+- **MODULE DOC:** SQLAlchemy Async Session Factory - Engine and session management.  
+- **CLASSES:** —  
+- **FUNCTIONS:** —  
+
+### sqlalchemy_async_session_factory/engine.py
+- **FILE:** sqlalchemy_async_session_factory/engine.py  
+- **MODULE DOC:** Async engine factory with connection pooling.  
+- **CLASSES:** —  
+- **FUNCTIONS:**  
+  - _is_sqlite(database_url: str) -> bool - Check if the database URL targets SQLite.  
+  - create_async_engine_with_pool(database_url: str, echo: bool = False, pool_size: int = 5, max_overflow: int = 5, pool_timeout: int = 30, pool_pre_ping: bool = True, pool_recycle: int = 300, **kwargs) -> AsyncEngine - Create async SQLAlchemy engine with connection pooling.  
+
+### sqlalchemy_async_session_factory/session.py
+- **FILE:** sqlalchemy_async_session_factory/session.py  
+- **MODULE DOC:** Async session factory and FastAPI dependency.  
+- **CLASSES:** —  
+- **FUNCTIONS:**  
+  - create_async_session_maker(engine: AsyncEngine, expire_on_commit: bool = False, **kwargs) -> async_sessionmaker[AsyncSession] - Create async session maker for SQLAlchemy.  
+  - create_session_dependency(session_maker: async_sessionmaker[AsyncSession]) -> Callable[[], AsyncGenerator[AsyncSession, None]] - Create FastAPI dependency for database sessions.  
+
+### sqlalchemy_async_session_factory/utils.py
+- **FILE:** sqlalchemy_async_session_factory/utils.py  
+- **MODULE DOC:** Utility functions for connection pool management.  
+- **CLASSES:** —  
+- **FUNCTIONS:**  
+  - suppress_pool_warnings() -> None - Suppress connection pool warnings during cleanup.  
+  - setup_pool_event_handlers(engine: AsyncEngine) -> None - Setup event handlers for connection pool.  
+
+---
+
+## 5. sqlalchemy-async-repositories/src/
+
+### sqlalchemy_async_repositories/__init__.py
+- **FILE:** sqlalchemy_async_repositories/__init__.py  
+- **MODULE DOC:** SQLAlchemy async repositories library.  
+- **CLASSES:** —  
+- **FUNCTIONS:** —  
+
+### sqlalchemy_async_repositories/interfaces.py
+- **FILE:** sqlalchemy_async_repositories/interfaces.py  
+- **MODULE DOC:** Repository interface definitions.  
+- **CLASSES:** IRepository(ABC, Generic[T]) - Base repository interface for common database operations.  
+- **FUNCTIONS:** get_by_id, create, update, delete, get_all, exists, count (all abstract)  
+
+### sqlalchemy_async_repositories/base.py
+- **FILE:** sqlalchemy_async_repositories/base.py  
+- **MODULE DOC:** Base repository - orchestrates use case handlers.  
+- **CLASSES:** BaseRepository(IRepository[T], Generic[T]) - Base repository orchestrating use case handlers.  
+- **FUNCTIONS:**  
+  - get_by_id(self, entity_id: Any) -> Optional[T] - Query: Get entity by ID.  
+  - get_all(self, limit: Optional[int] = None, offset: int = 0) -> List[T] - Query: Get all entities.  
+  - exists(self, entity_id: Any) -> bool - Query: Check if entity exists.  
+  - count(self) -> int - Query: Count total entities.  
+  - create(self, entity: T) -> T - Command: Create new entity.  
+  - update(self, entity: T) -> T - Command: Update existing entity.  
+  - delete(self, entity_id: Any) -> bool - Command: Delete entity.  
+  - find_paginated(self, page: int = 1, page_size: int = 10, filters: Optional[List[FilterSpec]] = None, sort: Optional[List[SortSpec]] = None) -> PaginatedResult[T] - Query: Paginated results using Strategy Pattern.  
+  - get_pagination_backend_info(self) -> dict - Get current pagination backend info (debugging/monitoring).  
+
+### sqlalchemy_async_repositories/pagination.py
+- **FILE:** sqlalchemy_async_repositories/pagination.py  
+- **MODULE DOC:** Pagination, filtering, and sorting utilities.  
+- **CLASSES:** FilterSpec(BaseModel) - Filter specification for queries.; SortSpec(BaseModel) - Sort specification for queries.; PaginatedResult(BaseModel, Generic[T]) - Paginated result with metadata.  
+- **FUNCTIONS:** has_fastcrud() -> bool - Check if FastCRUD is available.  
+
+### sqlalchemy_async_repositories/pagination_native.py
+- **FILE:** sqlalchemy_async_repositories/pagination_native.py  
+- **MODULE DOC:** DEPRECATED: Moved to pagination/strategies/native_strategy.py  
+- **CLASSES:** —  
+- **FUNCTIONS:**  
+  - find_paginated_native(db_session, model_class, page, page_size, filters, sort) -> PaginatedResult - Paginated query using native SQLAlchemy.  
+  - _apply_filter(query, model_class, filter_spec) -> Any - Apply filter to query.  
+  - _apply_sort(query, model_class, sort_spec) -> Any - Apply sorting to query.  
+
+### sqlalchemy_async_repositories/pagination_fastcrud.py
+- **FILE:** sqlalchemy_async_repositories/pagination_fastcrud.py  
+- **MODULE DOC:** FastCRUD implementation for pagination (used when available).  
+- **CLASSES:** —  
+- **FUNCTIONS:** find_paginated_fastcrud(fastcrud_instance, db_session, page, page_size, filters, sort) -> PaginatedResult - Paginated query using FastCRUD.  
+
+### sqlalchemy_async_repositories/pagination/__init__.py
+- **FILE:** sqlalchemy_async_repositories/pagination/__init__.py  
+- **MODULE DOC:** Pagination module - Strategy Pattern implementation.  
+- **CLASSES:** —  
+- **FUNCTIONS:** —  
+
+### sqlalchemy_async_repositories/pagination/models.py
+- **FILE:** sqlalchemy_async_repositories/pagination/models.py  
+- **MODULE DOC:** Pagination data models.  
+- **CLASSES:** FilterSpec(BaseModel) - Specification for filtering queries.; SortSpec(BaseModel) - Specification for sorting queries.; PaginatedResult(BaseModel, Generic[T]) - Generic paginated result structure.  
+- **FUNCTIONS:** has_fastcrud() -> bool - Check if FastCRUD is installed.  
+
+### sqlalchemy_async_repositories/pagination/router.py
+- **FILE:** sqlalchemy_async_repositories/pagination/router.py  
+- **MODULE DOC:** Pagination router - Strategy Pattern selector.  
+- **CLASSES:** PaginationRouter - Routes pagination requests to appropriate strategy.  
+- **FUNCTIONS:** find_paginated(self, db, model_class, page, page_size, filters, sort) -> PaginatedResult - Execute paginated query using selected strategy.  
+
+### sqlalchemy_async_repositories/pagination/strategies/__init__.py
+- **FILE:** sqlalchemy_async_repositories/pagination/strategies/__init__.py  
+- **MODULE DOC:** Pagination strategies (Strategy Pattern).  
+- **CLASSES:** —  
+- **FUNCTIONS:** —  
+
+### sqlalchemy_async_repositories/pagination/strategies/base.py
+- **FILE:** sqlalchemy_async_repositories/pagination/strategies/base.py  
+- **MODULE DOC:** Protocol for pagination strategies (Strategy Pattern).  
+- **CLASSES:** IPaginationStrategy(Protocol) - Protocol for pagination strategies.  
+- **FUNCTIONS:** execute(self, db, model_class, page, page_size, filters, sort) -> PaginatedResult - Execute paginated query.  
+
+### sqlalchemy_async_repositories/pagination/strategies/native_strategy.py
+- **FILE:** sqlalchemy_async_repositories/pagination/strategies/native_strategy.py  
+- **MODULE DOC:** Native SQLAlchemy pagination strategy (fallback).  
+- **CLASSES:** NativeStrategy - Pagination strategy using native SQLAlchemy (zero dependencies).  
+- **FUNCTIONS:**  
+  - execute(self, db, model_class, page, page_size, filters, sort) -> PaginatedResult - Execute paginated query using native SQLAlchemy.  
+  - _apply_filter(self, query, model_class, f: FilterSpec) -> Any - Apply filter to query.  
+  - _apply_sort(self, query, model_class, s: SortSpec) -> Any - Apply sorting to query.  
+
+### sqlalchemy_async_repositories/pagination/strategies/fastcrud_strategy.py
+- **FILE:** sqlalchemy_async_repositories/pagination/strategies/fastcrud_strategy.py  
+- **MODULE DOC:** FastCRUD pagination strategy.  
+- **CLASSES:** FastCRUDStrategy - Pagination strategy using FastCRUD library.  
+- **FUNCTIONS:**  
+  - execute(self, db, model_class, page, page_size, filters, sort) -> PaginatedResult - Execute paginated query using FastCRUD.  
+  - _convert_filters(self, filters: Optional[List[FilterSpec]]) -> dict - Convert FilterSpec list to FastCRUD format.  
+
+### sqlalchemy_async_repositories/use_cases/__init__.py
+- **FILE:** sqlalchemy_async_repositories/use_cases/__init__.py  
+- **MODULE DOC:** Repository use cases (queries and commands).  
+- **CLASSES:** —  
+- **FUNCTIONS:** —  
+
+### sqlalchemy_async_repositories/use_cases/get_by_id/query_handler.py
+- **FILE:** sqlalchemy_async_repositories/use_cases/get_by_id/query_handler.py  
+- **MODULE DOC:** Query handler for get_by_id use case.  
+- **CLASSES:** GetByIdHandler - Handler for get_by_id query.  
+- **FUNCTIONS:** execute(self, entity_id: Any) -> Optional[DeclarativeBase] - Execute get_by_id query.  
+
+### sqlalchemy_async_repositories/use_cases/get_by_id/query_model.py
+- **FILE:** sqlalchemy_async_repositories/use_cases/get_by_id/query_model.py  
+- **MODULE DOC:** Query model for get_by_id use case.  
+- **CLASSES:** GetByIdQuery(BaseModel) - Query: Get entity by ID.  
+- **FUNCTIONS:** —  
+
+### sqlalchemy_async_repositories/use_cases/get_all/query_handler.py
+- **FILE:** sqlalchemy_async_repositories/use_cases/get_all/query_handler.py  
+- **MODULE DOC:** Query handler for get_all use case.  
+- **CLASSES:** GetAllHandler - Handler for get_all query.  
+- **FUNCTIONS:** execute(self, limit: Optional[int] = None, offset: int = 0) -> List[DeclarativeBase] - Execute get_all query.  
+
+### sqlalchemy_async_repositories/use_cases/get_all/query_model.py
+- **FILE:** sqlalchemy_async_repositories/use_cases/get_all/query_model.py  
+- **MODULE DOC:** Query model for get_all use case.  
+- **CLASSES:** GetAllQuery(BaseModel) - Query: Get all entities with optional pagination.  
+- **FUNCTIONS:** —  
+
+### sqlalchemy_async_repositories/use_cases/exists/query_handler.py
+- **FILE:** sqlalchemy_async_repositories/use_cases/exists/query_handler.py  
+- **MODULE DOC:** Query handler for exists use case.  
+- **CLASSES:** ExistsHandler - Handler for exists query.  
+- **FUNCTIONS:** execute(self, entity_id: Any) -> bool - Execute exists query.  
+
+### sqlalchemy_async_repositories/use_cases/exists/query_model.py
+- **FILE:** sqlalchemy_async_repositories/use_cases/exists/query_model.py  
+- **MODULE DOC:** Query model for exists use case.  
+- **CLASSES:** ExistsQuery(BaseModel) - Query: Check if entity exists by ID.  
+- **FUNCTIONS:** —  
+
+### sqlalchemy_async_repositories/use_cases/count/query_handler.py
+- **FILE:** sqlalchemy_async_repositories/use_cases/count/query_handler.py  
+- **MODULE DOC:** Query handler for count use case.  
+- **CLASSES:** CountHandler - Handler for count query.  
+- **FUNCTIONS:** execute(self) -> int - Execute count query.  
+
+### sqlalchemy_async_repositories/use_cases/count/query_model.py
+- **FILE:** sqlalchemy_async_repositories/use_cases/count/query_model.py  
+- **MODULE DOC:** Query model for count use case.  
+- **CLASSES:** CountQuery(BaseModel) - Query: Count total entities.  
+- **FUNCTIONS:** —  
+
+### sqlalchemy_async_repositories/use_cases/create/command_handler.py
+- **FILE:** sqlalchemy_async_repositories/use_cases/create/command_handler.py  
+- **MODULE DOC:** Command handler for create use case.  
+- **CLASSES:** CreateHandler - Handler for create command.  
+- **FUNCTIONS:** execute(self, entity: DeclarativeBase) -> DeclarativeBase - Execute create command.  
+
+### sqlalchemy_async_repositories/use_cases/create/command_model.py
+- **FILE:** sqlalchemy_async_repositories/use_cases/create/command_model.py  
+- **MODULE DOC:** Command model for create use case.  
+- **CLASSES:** CreateCommand(BaseModel) - Command: Create new entity.  
+- **FUNCTIONS:** —  
+
+### sqlalchemy_async_repositories/use_cases/update/command_handler.py
+- **FILE:** sqlalchemy_async_repositories/use_cases/update/command_handler.py  
+- **MODULE DOC:** Command handler for update use case.  
+- **CLASSES:** UpdateHandler - Handler for update command.  
+- **FUNCTIONS:** execute(self, entity: DeclarativeBase) -> DeclarativeBase - Execute update command.  
+
+### sqlalchemy_async_repositories/use_cases/update/command_model.py
+- **FILE:** sqlalchemy_async_repositories/use_cases/update/command_model.py  
+- **MODULE DOC:** Command model for update use case.  
+- **CLASSES:** UpdateCommand(BaseModel) - Command: Update existing entity.  
+- **FUNCTIONS:** —  
+
+### sqlalchemy_async_repositories/use_cases/delete/command_handler.py
+- **FILE:** sqlalchemy_async_repositories/use_cases/delete/command_handler.py  
+- **MODULE DOC:** Command handler for delete use case.  
+- **CLASSES:** DeleteHandler - Handler for delete command.  
+- **FUNCTIONS:** execute(self, entity_id: Any) -> bool - Execute delete command.  
+
+### sqlalchemy_async_repositories/use_cases/delete/command_model.py
+- **FILE:** sqlalchemy_async_repositories/use_cases/delete/command_model.py  
+- **MODULE DOC:** Command model for delete use case.  
+- **CLASSES:** DeleteCommand(BaseModel) - Command: Delete entity by ID.  
+- **FUNCTIONS:** —  
+
+### sqlalchemy_async_repositories/use_cases/find_paginated/query_handler.py
+- **FILE:** sqlalchemy_async_repositories/use_cases/find_paginated/query_handler.py  
+- **MODULE DOC:** Query handler for find_paginated use case.  
+- **CLASSES:** FindPaginatedHandler - Handler for find_paginated query using Strategy + Factory patterns.  
+- **FUNCTIONS:**  
+  - get_backend_info(self) -> dict - Get current pagination backend info (debugging/monitoring).  
+  - execute(self, page: int = 1, page_size: int = 10, filters: Optional[List[FilterSpec]] = None, sort: Optional[List[SortSpec]] = None) -> PaginatedResult - Execute find_paginated query using selected strategy.  
+
+### sqlalchemy_async_repositories/use_cases/find_paginated/query_model.py
+- **FILE:** sqlalchemy_async_repositories/use_cases/find_paginated/query_model.py  
+- **MODULE DOC:** Query model for find_paginated use case.  
+- **CLASSES:** FindPaginatedQuery(BaseModel) - Query: Find entities with pagination, filtering, and sorting.  
+- **FUNCTIONS:** —  
+
+### sqlalchemy_async_repositories/use_cases/find_paginated/strategy_factory.py
+- **FILE:** sqlalchemy_async_repositories/use_cases/find_paginated/strategy_factory.py  
+- **MODULE DOC:** Strategy Factory for pagination backends.  
+- **CLASSES:** PaginationStrategyFactory - Factory for creating pagination strategy instances.  
+- **FUNCTIONS:**  
+  - create() -> IPaginationStrategy - Create appropriate pagination strategy (Factory Method).  
+  - get_backend_name(strategy: IPaginationStrategy) -> str - Get human-readable backend name from strategy instance.  
+  - is_fastcrud_available() -> bool - Check if FastCRUD is available for use.

@@ -641,4 +641,139 @@ Extraction report for all 6 packages:
 **FILE:** python-technical-primitives/src/python_technical_primitives/text/operations.py  
 **MODULE DOC:** String utility operations.  
 **CLASSES:** (none)  
-**FUNCTIONS:** to_sentence_case(text) -> str - Convert string to sentence case.; to_lower_case(text) -> str - Convert string to lowercase.; to_upper_case(text) -> str - Con
+**FUNCTIONS:** to_sentence_case(text) -> str - Convert string to sentence case.; to_lower_case(text) -> str - Convert string to lowercase.; to_upper_case(text) -> str - Convert string to uppercase.; truncate(text, max_length, suffix="...") -> str - Truncate string to max length with suffix.; normalize_whitespace(text) -> str - Normalize whitespace.; is_valid_email(email) -> bool - Check if string is valid email format.; sanitize_filename(filename) -> str - Sanitize filename by removing/replacing invalid characters.; extract_extension(filename) -> Optional[str] - Extract file extension from filename.
+
+---
+
+## 2. python-app-exceptions
+
+**FILE:** python-app-exceptions/src/python_app_exceptions/__init__.py  
+**MODULE DOC:** Python application exceptions library.  
+**CLASSES:** (none)  
+**FUNCTIONS:** (none)
+
+**FILE:** python-app-exceptions/src/python_app_exceptions/base.py  
+**MODULE DOC:** Base exception classes for Python web applications.  
+**CLASSES:** BaseApplicationException(Exception) - Base exception for all application errors.  
+**FUNCTIONS:** (none) — methods: __init__(self, message, details=None)
+
+**FILE:** python-app-exceptions/src/python_app_exceptions/business.py  
+**MODULE DOC:** Business logic exception classes.  
+**CLASSES:** BusinessLogicError(BaseApplicationException) - Raised when business rules are violated.  
+**FUNCTIONS:** (none) — methods: __init__(self, rule, details=None)
+
+**FILE:** python-app-exceptions/src/python_app_exceptions/retry.py  
+**MODULE DOC:** Retry logic exception classes.  
+**CLASSES:** RetryExhaustedException(BaseApplicationException) - Raised when retry attempts are exhausted.; RetryableError(BaseApplicationException) - Raised for errors that can be retried.  
+**FUNCTIONS:** (none) — methods: __init__(operation, attempts), __init__(message, retry_after=None)
+
+**FILE:** python-app-exceptions/src/python_app_exceptions/validation.py  
+**MODULE DOC:** Validation exception classes.  
+**CLASSES:** ValidationError(BaseApplicationException) - Raised when data validation fails.; InvalidInputError(ValidationError) - Raised when input data is invalid.  
+**FUNCTIONS:** (none) — methods: __init__(field, value=None, details=None), __init__(input_name, expected_format=None)
+
+---
+
+## 3. python-infrastructure-exceptions
+
+**FILE:** python-infrastructure-exceptions/src/python_infrastructure_exceptions/__init__.py  
+**MODULE DOC:** Infrastructure layer exception classes.  
+**CLASSES:** (none)  
+**FUNCTIONS:** (none)
+
+**FILE:** python-infrastructure-exceptions/src/python_infrastructure_exceptions/base.py  
+**MODULE DOC:** Base infrastructure exception class.  
+**CLASSES:** InfrastructureException(Exception) - Base exception for all infrastructure-layer errors.  
+**FUNCTIONS:** (none) — methods: __init__(self, message, details=None)
+
+**FILE:** python-infrastructure-exceptions/src/python_infrastructure_exceptions/cache.py  
+**MODULE DOC:** Cache infrastructure exceptions.  
+**CLASSES:** CacheError(InfrastructureException) - Cache infrastructure error.  
+**FUNCTIONS:** (none) — methods: __init__(self, message, details=None, cache_backend=None, key=None)
+
+**FILE:** python-infrastructure-exceptions/src/python_infrastructure_exceptions/configuration.py  
+**MODULE DOC:** Configuration infrastructure exceptions.  
+**CLASSES:** ConfigurationError(InfrastructureException) - Configuration infrastructure error.  
+**FUNCTIONS:** (none) — methods: __init__(self, message, details=None, config_key=None)
+
+**FILE:** python-infrastructure-exceptions/src/python_infrastructure_exceptions/database.py  
+**MODULE DOC:** Database-specific infrastructure exceptions.  
+**CLASSES:** DatabaseError(InfrastructureException) - Database infrastructure error.  
+**FUNCTIONS:** (none) — methods: __init__(self, message, details=None, query=None)
+
+**FILE:** python-infrastructure-exceptions/src/python_infrastructure_exceptions/external_services.py  
+**MODULE DOC:** External service infrastructure exceptions.  
+**CLASSES:** ExternalServiceError(InfrastructureException) - External service/API infrastructure error.  
+**FUNCTIONS:** (none) — methods: __init__(self, message, service_name=None, details=None, status_code=None)
+
+**FILE:** python-infrastructure-exceptions/src/python_infrastructure_exceptions/messaging.py  
+**MODULE DOC:** Message queue infrastructure exceptions.  
+**CLASSES:** MessageQueueError(InfrastructureException) - Message queue/broker infrastructure error.  
+**FUNCTIONS:** (none) — methods: __init__(self, message, details=None, broker=None, topic=None)
+
+---
+
+## 4. python-input-validation
+
+**FILE:** python-input-validation/src/python_input_validation/__init__.py  
+**MODULE DOC:** Python input validation library.  
+**CLASSES:** (none)  
+**FUNCTIONS:** (none)
+
+**FILE:** python-input-validation/src/python_input_validation/sanitizers.py  
+**MODULE DOC:** Business-level input sanitizers.  
+**CLASSES:** (none)  
+**FUNCTIONS:** sanitize_email(email) -> str - Sanitize email input (business-level).; sanitize_text_input(text, max_length=None) -> str - Sanitize general text input.
+
+**FILE:** python-input-validation/src/python_input_validation/validators.py  
+**MODULE DOC:** Business-level input validators.  
+**CLASSES:** (none)  
+**FUNCTIONS:** validate_email_format(email) -> bool - Validate email format (business-level).; validate_string_length(text, min_length=None, max_length=None) -> bool - Validate string length constraints.
+
+---
+
+## 5. postgres-data-sanitizers
+
+**FILE:** postgres-data-sanitizers/src/postgres_data_sanitizers/__init__.py  
+**MODULE DOC:** PostgreSQL data sanitizers library.  
+**CLASSES:** (none)  
+**FUNCTIONS:** (none)
+
+**FILE:** postgres-data-sanitizers/src/postgres_data_sanitizers/escape.py  
+**MODULE DOC:** Core null character escaping for PostgreSQL compatibility.  
+**CLASSES:** (none)  
+**FUNCTIONS:** escape_null_chars(text) -> str - Escape null characters to Unicode representation for PostgreSQL.; unescape_null_chars(text) -> str - Unescape Unicode representation back to null characters.
+
+**FILE:** postgres-data-sanitizers/src/postgres_data_sanitizers/sanitize.py  
+**MODULE DOC:** Dictionary sanitization for PostgreSQL JSONB compatibility.  
+**CLASSES:** (none)  
+**FUNCTIONS:** sanitize_dict_for_postgres(data) -> Dict[str, Any] - Recursively escape null chars in dict for PostgreSQL JSONB storage.; unescape_dict_from_postgres(data) -> Dict[str, Any] - Recursively unescape null chars from PostgreSQL JSONB data.
+
+**FILE:** postgres-data-sanitizers/src/postgres_data_sanitizers/string_validators.py  
+**MODULE DOC:** Shared string validation utilities.  
+**CLASSES:** (none)  
+**FUNCTIONS:** contains_surrogates(text) -> bool - Check if string contains UTF-8 surrogate characters.
+
+**FILE:** postgres-data-sanitizers/src/postgres_data_sanitizers/validate.py  
+**MODULE DOC:** Validation functions for PostgreSQL text fields.  
+**CLASSES:** (none)  
+**FUNCTIONS:** validate_postgres_text(text) -> Optional[str] - Validate and escape text for PostgreSQL storage.
+
+---
+
+## 6. pydantic-response-models
+
+**FILE:** pydantic-response-models/src/pydantic_response_models/__init__.py  
+**MODULE DOC:** Pydantic response models library.  
+**CLASSES:** (none)  
+**FUNCTIONS:** (none)
+
+**FILE:** pydantic-response-models/src/pydantic_response_models/fields.py  
+**MODULE DOC:** Universal field factory functions for Pydantic models.  
+**CLASSES:** (none)  
+**FUNCTIONS:** email_field() -> Field - Factory for email field.; token_field() -> Field - Factory for token field with consistent definition.
+
+**FILE:** pydantic-response-models/src/pydantic_response_models/responses.py  
+**MODULE DOC:** Common API response DTOs.  
+**CLASSES:** SuccessResponse(BaseModel, Generic[T]) - Generic success response wrapper.; ErrorDetail(BaseModel) - Error detail model.; ErrorResponse(BaseModel) - Standard error response.; PaginatedResponse(BaseModel, Generic[T]) - Paginated response wrapper.; MessageResponse(BaseModel) - Simple message response.  
+**FUNCTIONS:** (none)
