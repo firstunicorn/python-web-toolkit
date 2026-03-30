@@ -13,9 +13,9 @@ import sys
 from pathlib import Path
 
 try:
-    import toml
+    import tomli
 except ImportError:
-    print("ERROR: toml library not found. Install with: pip install toml")
+    print("ERROR: tomli library not found. Install with: pip install tomli")
     sys.exit(1)
 
 
@@ -57,7 +57,7 @@ def check_name_path_consistency():
     
     print("\n[1/2] Checking name/path consistency...")
     
-    root_config = toml.load('pyproject.toml')
+    root_config = tomli.load(open('pyproject.toml', 'rb'))
     dependencies = root_config.get('tool', {}).get('poetry', {}).get('dependencies', {})
     
     for pkg_name, config in dependencies.items():
@@ -79,7 +79,7 @@ def check_name_path_consistency():
             continue
         
         # Verify package name matches
-        pkg_config = toml.load(pkg_toml_path)
+        pkg_config = tomli.load(open(pkg_toml_path, 'rb'))
         
         # Try PEP 621 format first ([project] section)
         actual_name = pkg_config.get('project', {}).get('name')

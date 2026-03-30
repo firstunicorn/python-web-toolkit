@@ -63,7 +63,7 @@ ruff = ">=0.15,<1.0"
 mypy = "^1.19"
 import-linter = "^2.11"
 pre-commit = "^4.5"
-toml = "^0.10"
+tomli = "^2.0"
 
 [tool.poetry.group.docs.dependencies]
 sphinx = "^8.1"
@@ -74,7 +74,7 @@ sphinx-copybutton = "^0.5"
 sphinx-llms-txt = "^0.7"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core>=2.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]

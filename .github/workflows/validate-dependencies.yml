@@ -18,7 +18,7 @@ jobs:
       
       - name: Install Poetry and dependencies
         run: |
-          pip install poetry==2.2.1 toml
+          pip install poetry==2.3.3 tomli
       
       # Option 1: Poetry lock file validation
       - name: Check pyproject.toml validity
