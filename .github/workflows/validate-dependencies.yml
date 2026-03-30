@@ -43,7 +43,7 @@ jobs:
       - name: Validate dependency consistency (name/path matching + orphaned refs)
         run: |
           python << 'EOF'
-          import toml
+          import tomli
           import os
           import re
           
@@ -54,7 +54,7 @@ jobs:
           print("=" * 60)
           
           # 1. Check name/path consistency
-          root = toml.load('pyproject.toml')
+          root = tomli.load(open('pyproject.toml', 'rb'))
           deps = root.get('tool', {}).get('poetry', {}).get('dependencies', {})
           
           for pkg_name, config in deps.items():
@@ -68,7 +68,7 @@ jobs:
                   
                   pkg_toml = os.path.join(path, 'pyproject.toml')
                   if os.path.exists(pkg_toml):
-                      pkg_config = toml.load(pkg_toml)
+                      pkg_config = tomli.load(open(pkg_toml, 'rb'))
                       # Try PEP 621 format first, fall back to Poetry
                       actual_name = pkg_config.get('project', {}).get('name')
                       if not actual_name:
