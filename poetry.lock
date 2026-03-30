@@ -644,6 +644,24 @@ docs = ["Sphinx", "furo"]
 test = ["objgraph", "psutil", "setuptools"]
 
 [[package]]
+name = "gridflow-python-mediator"
+version = "0.1.0"
+description = "Generic mediator pattern with pipeline behaviors"
+optional = false
+python-versions = ">=3.10"
+groups = ["main"]
+files = []
+develop = true
+
+[package.extras]
+dev = ["pytest (>=7.4.0)", "pytest-asyncio (>=0.21.0)"]
+logging = ["structlog (>=23.0.0)"]
+
+[package.source]
+type = "directory"
+url = "packages/gridflow-python-mediator"
+
+[[package]]
 name = "grimp"
 version = "3.14"
 description = "Builds a queryable graph of the imports within one or more Python packages."
@@ -1607,7 +1625,7 @@ url = "packages/python-cqrs-core"
 [[package]]
 name = "python-cqrs-dispatcher"
 version = "0.1.0"
-description = "CQRS dispatcher integrating python-cqrs-core with python-mediator"
+description = "CQRS dispatcher integrating python-cqrs-core with gridflow-python-mediator"
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
@@ -1615,8 +1633,8 @@ files = []
 develop = true
 
 [package.dependencies]
+gridflow-python-mediator = "*"
 python-cqrs-core = "*"
-python-mediator = "*"
 
 [package.extras]
 dev = ["pytest (>=7.4.0)", "pytest-asyncio (>=0.21.0)"]
@@ -1711,24 +1729,6 @@ dev = ["black", "hypothesis (>=6.92.0)", "mypy", "pytest (>=7.0)", "ruff"]
 [package.source]
 type = "directory"
 url = "packages/python-input-validation"
-
-[[package]]
-name = "python-mediator"
-version = "0.1.0"
-description = "Generic mediator pattern with pipeline behaviors"
-optional = false
-python-versions = ">=3.10"
-groups = ["main"]
-files = []
-develop = true
-
-[package.extras]
-dev = ["pytest (>=7.4.0)", "pytest-asyncio (>=0.21.0)"]
-logging = ["structlog (>=23.0.0)"]
-
-[package.source]
-type = "directory"
-url = "packages/python-mediator"
 
 [[package]]
 name = "python-outbox-core"
@@ -2120,6 +2120,21 @@ code-style = ["pre-commit (==2.12.1)"]
 rtd = ["ipython", "myst-nb", "sphinx", "sphinx-book-theme", "sphinx-examples"]
 
 [[package]]
+name = "sphinx-llms-txt"
+version = "0.7.1"
+description = "llms-full.txt generator for Sphinx"
+optional = false
+python-versions = "*"
+groups = ["docs"]
+files = [
+    {file = "sphinx_llms_txt-0.7.1-py3-none-any.whl", hash = "sha256:8f1cfcfe5897f5be118792f33f73eeb04cbbf66fc60c4c15982ec59252522263"},
+    {file = "sphinx_llms_txt-0.7.1.tar.gz", hash = "sha256:b5cefec19d3fd56670aa4a28917d17d32b22c61a9feadbab8564ad11e932f5c0"},
+]
+
+[package.dependencies]
+sphinx = "*"
+
+[[package]]
 name = "sphinxcontrib-applehelp"
 version = "2.0.0"
 description = "sphinxcontrib-applehelp is a Sphinx extension which outputs Apple help books"
@@ -2505,4 +2520,4 @@ zstd = ["backports-zstd (>=1.0.0) ; python_version < \"3.14\""]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.10"
-content-hash = "c9f80faa5e6d2417c90f57b5b2a9aab08e382d2ebd7a603feab912fba06e24cc"
+content-hash = "41da538ce5a5a02170db632519092537a237c49f7710a138aa3eef57c099a267"
