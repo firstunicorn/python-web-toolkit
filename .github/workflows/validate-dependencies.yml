@@ -69,7 +69,11 @@ jobs:
                   pkg_toml = os.path.join(path, 'pyproject.toml')
                   if os.path.exists(pkg_toml):
                       pkg_config = toml.load(pkg_toml)
-                      actual_name = pkg_config.get('tool', {}).get('poetry', {}).get('name')
+                      # Try PEP 621 format first, fall back to Poetry
+                      actual_name = pkg_config.get('project', {}).get('name')
+                      if not actual_name:
+                          actual_name = pkg_config.get('tool', {}).get('poetry', {}).get('name')
+                      
                       if actual_name and actual_name != pkg_name:
                           errors.append(
                               f"Name mismatch: dependency key '{pkg_name}' but "
@@ -120,7 +124,7 @@ jobs:
           cp poetry.lock poetry.lock.original
           
           echo "Regenerating lock file..."
-          poetry lock --no-update
+          poetry lock
           
           echo "Comparing files..."
           if ! diff -q poetry.lock.original poetry.lock; then
