@@ -4,6 +4,7 @@
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Validate Dependencies](https://github.com/firstunicorn/python-web-toolkit/actions/workflows/validate-dependencies.yml/badge.svg)](https://github.com/firstunicorn/python-web-toolkit/actions/workflows/validate-dependencies.yml)
 
 Comprehensive Python web development toolkit organized as a monorepo with 17 independent micro-libraries.
 
