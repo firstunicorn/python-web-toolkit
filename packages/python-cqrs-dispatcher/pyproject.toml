@@ -1,6 +1,6 @@
 [project]
 name = "python-cqrs-dispatcher"
-version = "0.1.0"
+version = "0.1.1"
 description = "CQRS dispatcher integrating python-cqrs-core with gridflow-python-mediator"
 readme = "README.md"
 requires-python = ">=3.10"
