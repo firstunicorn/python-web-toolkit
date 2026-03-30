@@ -5,7 +5,7 @@ RULE: Maximum 100 lines per file.
 """
 
 import pytest
-from python_mediator import Mediator
+from gridflow_python_mediator import Mediator
 
 
 class SampleRequest:

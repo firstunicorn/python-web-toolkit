@@ -72,7 +72,7 @@ pip install python-structlog-config>=0.1.0
 pip install python-infrastructure-exceptions>=0.1.0
 pip install python-dto-mappers>=0.1.0
 pip install python-cqrs-core>=0.1.0
-pip install python-mediator>=0.1.0
+pip install gridflow-python-mediator>=0.1.0
 pip install python-cqrs-dispatcher>=0.1.0
 pip install python-outbox-core>=0.1.0
 ```

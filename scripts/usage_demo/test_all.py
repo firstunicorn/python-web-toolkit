@@ -13,7 +13,7 @@ packages_to_test = [
     "python_dto_mappers",
     "python_infrastructure_exceptions",
     "python_input_validation",
-    "python_mediator",
+    "gridflow_python_mediator",
     "python_outbox_core",
     "python_structlog_config",
     "python_technical_primitives",

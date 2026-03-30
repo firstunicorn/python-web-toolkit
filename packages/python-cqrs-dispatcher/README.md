@@ -1,6 +1,6 @@
 # Python CQRS Dispatcher
 
-CQRS dispatcher that integrates `python-cqrs-core` with `python-mediator` for type-safe command/query dispatch.
+CQRS dispatcher that integrates `python-cqrs-core` with `gridflow-python-mediator` for type-safe command/query dispatch.
 
 ## Installation
 
@@ -81,7 +81,7 @@ register_handlers(dispatcher, handlers)
 ### Pipeline Behaviors
 
 ```python
-from python_mediator import LoggingBehavior, TimingBehavior
+from gridflow_python_mediator import LoggingBehavior, TimingBehavior
 
 # Add behaviors (execute before all handlers)
 dispatcher.add_pipeline_behavior(LoggingBehavior().handle)
@@ -170,7 +170,7 @@ Auto-discover and register handlers.
 ## Dependencies
 
 - `python-cqrs-core>=0.1.0`
-- `python-mediator>=0.1.0`
+- `gridflow-python-mediator>=0.1.0`
 
 ## License
 

@@ -175,7 +175,7 @@ app = FastAPI(lifespan=create_lifespan_manager(on_startup=init_db, on_shutdown=c
 </details>
 
 <details>
-<summary><b>python-mediator</b> — mediator with pipeline behaviors</summary>
+<summary><b>gridflow-python-mediator</b> — mediator with pipeline behaviors</summary>
 
 BEFORE (without library):
 ```python
@@ -190,7 +190,7 @@ logger.info(f"Done in {time.time() - start:.2f}s")
 
 AFTER (using library):
 ```python
-from python_mediator import Mediator, LoggingBehavior, TimingBehavior
+from gridflow_python_mediator import Mediator, LoggingBehavior, TimingBehavior
 
 mediator = Mediator()
 mediator.add_pipeline_behavior(LoggingBehavior().handle)
@@ -475,7 +475,7 @@ await dispatcher.dispatch(UserCreated(user_id=42))
 | **sqlalchemy-async-session-factory** | Copy-paste async engine + session boilerplate per project | `create_engine()` / `create_session()` — one-liner setup |
 | **python-structlog-config** | Raw `print()` or inconsistent logging setup | `configure_logging("dev")` — JSON in prod, colored in dev |
 | **fastapi-middleware-toolkit** | Manual CORS / error handler / lifespan wiring | `setup_middleware(app)` — one call configures everything |
-| **python-mediator** | Direct handler calls, no cross-cutting concerns | `mediator.send(cmd)` with pipeline behaviors (logging, validation) |
+| **gridflow-python-mediator** | Direct handler calls, no cross-cutting concerns | `mediator.send(cmd)` with pipeline behaviors (logging, validation) |
 | **python-cqrs-core** | Business logic mixed into route handlers | `Command` / `Query` objects enforce read-write separation |
 | **python-dto-mappers** | Manual `dict → DTO` conversion in every endpoint | `@auto_map` decorator — zero boilerplate mapping |
 | **fastapi-config-patterns** | Scattered `os.getenv()` calls, no validation | Pydantic `Settings` classes with type-safe env loading |
@@ -575,9 +575,9 @@ All packages are **v0.1.0** and independently installable.
   ```bash
   pip install python-cqrs-core
   ```
-- **python-mediator** - Generic mediator with pipeline behaviors
+- **gridflow-python-mediator** - Generic mediator with pipeline behaviors
   ```bash
-  pip install python-mediator
+  pip install gridflow-python-mediator
   ```
 - **python-cqrs-dispatcher** - CQRS dispatcher integrating commands/queries with mediator
   ```bash
@@ -647,7 +647,7 @@ poetry run pytest -v
 **Use when:** Working on a single package in isolation.
 
 **⚠️ Note:** Some packages have cross-dependencies within the monorepo:
-- `python-cqrs-dispatcher` requires `python-cqrs-core` + `python-mediator`
+- `python-cqrs-dispatcher` requires `python-cqrs-core` + `gridflow-python-mediator`
 - `sqlalchemy-async-repositories` may require specific Python constraints
 
 For packages with cross-dependencies, use **Option 1 (Workspace)** instead.
@@ -694,7 +694,7 @@ pip install -e ./python-web-toolkit/packages/python-structlog-config
 pip install -e ./python-web-toolkit/packages/python-infrastructure-exceptions
 pip install -e ./python-web-toolkit/packages/python-dto-mappers
 pip install -e ./python-web-toolkit/packages/python-cqrs-core
-pip install -e ./python-web-toolkit/packages/python-mediator
+pip install -e ./python-web-toolkit/packages/gridflow-python-mediator
 pip install -e ./python-web-toolkit/packages/python-cqrs-dispatcher
 pip install -e ./python-web-toolkit/packages/python-outbox-core
 ```
@@ -806,23 +806,23 @@ poetry run pytest && poetry run lint-imports
    - ✗ Cannot import: CQRS, mediator, repositories, FastAPI, DTOs
 
 2. **Domain Layer Cannot Import Application** - Mid layer depends only on primitives
-   - `python-cqrs-core`, `python-mediator`, `pydantic-response-models`, `python-dto-mappers`
+   - `python-cqrs-core`, `gridflow-python-mediator`, `pydantic-response-models`, `python-dto-mappers`
    - ✗ Cannot import: `python-cqrs-dispatcher`, repositories, FastAPI middleware
 
 3. **Core Components Independence** - Prevents circular dependencies
-   - `python-cqrs-core` and `python-mediator` must not import each other
+   - `python-cqrs-core` and `gridflow-python-mediator` must not import each other
 
 **Layer Hierarchy:**
 
 | Layer | Position | Packages | Import Rules |
 |-------|----------|----------|--------------|
 | **Application** | Top | `python-cqrs-dispatcher`<br>`sqlalchemy-async-repositories`<br>`fastapi-middleware-toolkit`<br>`fastapi-config-patterns` | ✅ Can import from any layer |
-| **Domain** | Middle | `python-cqrs-core`<br>`python-mediator`<br>`pydantic-response-models`<br>`python-dto-mappers`<br>`python-input-validation`<br>`python-outbox-core` | ✅ Can import primitives<br>❌ Cannot import application |
+| **Domain** | Middle | `python-cqrs-core`<br>`gridflow-python-mediator`<br>`pydantic-response-models`<br>`python-dto-mappers`<br>`python-input-validation`<br>`python-outbox-core` | ✅ Can import primitives<br>❌ Cannot import application |
 | **Primitives** | Bottom | `python-technical-primitives`<br>`python-app-exceptions`<br>`python-infrastructure-exceptions`<br>`postgres-data-sanitizers`<br>`sqlalchemy-async-session-factory`<br>`python-structlog-config` | ❌ Cannot import domain/application<br>(Fully isolated foundation) |
 
 **Text Summary:**
 - **Primitives** (bottom): `python-technical-primitives`, exceptions → Cannot import domain/application
-- **Domain** (middle): `python-cqrs-core`, `python-mediator`, DTOs → Cannot import application
+- **Domain** (middle): `python-cqrs-core`, `gridflow-python-mediator`, DTOs → Cannot import application
 - **Application** (top): `python-cqrs-dispatcher`, repositories, FastAPI → Can import anything
 
 ### Adding a New Package

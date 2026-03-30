@@ -1,14 +1,14 @@
 """CQRS dispatcher integrating CQRS core with mediator pattern."""
 
 from python_cqrs_core import ICommand, IQuery, ICommandHandler, IQueryHandler
-from python_mediator import Mediator
+from gridflow_python_mediator import Mediator
 from typing import Type, Any, Dict
 
 
 class CQRSDispatcher:
     """Dispatcher specialized for CQRS pattern.
     
-    Integrates python-cqrs-core with python-mediator, providing:
+    Integrates python-cqrs-core with gridflow-python-mediator, providing:
     - Type-safe command/query dispatch
     - Separate command/query handler registration
     - Pipeline behavior support through mediator
@@ -139,7 +139,7 @@ class CQRSDispatcher:
             behavior: Pipeline behavior function
         
         Example:
-            >>> from python_mediator import LoggingBehavior
+            >>> from gridflow_python_mediator import LoggingBehavior
             >>> dispatcher.add_pipeline_behavior(
             ...     LoggingBehavior().handle
             ... )

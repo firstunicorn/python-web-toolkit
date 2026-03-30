@@ -64,8 +64,8 @@ user = await query_handler.handle(query)
 Generic mediator with logging, timing, and validation behaviors for cross-cutting concerns.
 
 ```python
-from python_mediator import Mediator
-from python_mediator.behaviors import (
+from gridflow_python_mediator import Mediator
+from gridflow_python_mediator.behaviors import (
     LoggingBehavior,
     TimingBehavior,
     ValidationBehavior,

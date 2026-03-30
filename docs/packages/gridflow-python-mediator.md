@@ -1,11 +1,11 @@
-# python-mediator
+# gridflow-python-mediator
 
 Generic mediator pattern with pipeline behaviors for cross-cutting concerns.
 
 ## Installation
 
 ```bash
-pip install python-mediator
+pip install gridflow-python-mediator
 ```
 
 ## Public API
@@ -21,8 +21,8 @@ pip install python-mediator
 ## Usage
 
 ```python
-from python_mediator import Mediator
-from python_mediator.behaviors import LoggingBehavior, ValidationBehavior
+from gridflow_python_mediator import Mediator
+from gridflow_python_mediator.behaviors import LoggingBehavior, ValidationBehavior
 
 mediator = Mediator()
 mediator.add_pipeline_behavior(LoggingBehavior())

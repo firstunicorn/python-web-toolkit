@@ -1,4 +1,4 @@
-# Python Mediator
+# gridflow-python-mediator
 
 Generic mediator pattern implementation with zero dependencies and pipeline behavior support.
 
@@ -8,10 +8,10 @@ Generic mediator pattern implementation with zero dependencies and pipeline beha
 
 ```bash
 # Core (zero dependencies)
-pip install python-mediator
+pip install gridflow-python-mediator
 
 # With logging support
-pip install python-mediator[logging]
+pip install gridflow-python-mediator[logging]
 ```
 
 ## Features
@@ -26,7 +26,7 @@ pip install python-mediator[logging]
 ### Basic Mediator
 
 ```python
-from python_mediator import Mediator
+from gridflow_python_mediator import Mediator
 
 # Define request and handler
 class GetUserRequest:
@@ -51,7 +51,7 @@ result = await mediator.send(request)
 
 ```python
 from python_cqrs_core import BaseCommand, ICommandHandler
-from python_mediator import Mediator
+from gridflow_python_mediator import Mediator
 
 class CreateUserCommand(BaseCommand):
     name: str
@@ -72,7 +72,7 @@ user_id = await mediator.send(cmd)
 ### Pipeline Behaviors
 
 ```python
-from python_mediator import (
+from gridflow_python_mediator import (
     Mediator,
     LoggingBehavior,
     TimingBehavior,

@@ -11,7 +11,7 @@ Packages
    postgres-data-sanitizers
    pydantic-response-models
    python-cqrs-core
-   python-mediator
+   gridflow-python-mediator
    python-cqrs-dispatcher
    python-dto-mappers
    python-domain-events

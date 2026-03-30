@@ -4,7 +4,7 @@
 
 ```
 Application layer (depends on Domain + Primitives)
-├── python-mediator
+├── gridflow-python-mediator
 ├── python-cqrs-dispatcher (depends on cqrs-core + mediator)
 ├── fastapi-config-patterns
 ├── fastapi-middleware-toolkit
@@ -41,7 +41,7 @@ Only one cross-package dependency exists:
 ```
 python-cqrs-dispatcher
 ├── python-cqrs-core (ICommand, IQuery interfaces)
-└── python-mediator  (Mediator dispatch engine)
+└── gridflow-python-mediator  (Mediator dispatch engine)
 ```
 
 All other packages are fully independent.
@@ -53,9 +53,9 @@ All other packages are fully independent.
 | Specification | `python-technical-primitives` |
 | Repository + Strategy | `sqlalchemy-async-repositories` |
 | Factory Method | `sqlalchemy-async-repositories` (pagination) |
-| Mediator | `python-mediator` |
+| Mediator | `gridflow-python-mediator` |
 | CQRS | `python-cqrs-core`, `python-cqrs-dispatcher` |
-| Pipeline behaviors | `python-mediator` |
+| Pipeline behaviors | `gridflow-python-mediator` |
 | Transactional outbox | `python-outbox-core` |
 | Strategy (formatters) | `python-outbox-core` |
 | CloudEvents | `python-outbox-core` |

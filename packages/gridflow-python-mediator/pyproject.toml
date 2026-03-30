@@ -1,5 +1,5 @@
 [project]
-name = "python-mediator"
+name = "gridflow-python-mediator"
 version = "0.1.0"
 description = "Generic mediator pattern with pipeline behaviors"
 readme = "README.md"

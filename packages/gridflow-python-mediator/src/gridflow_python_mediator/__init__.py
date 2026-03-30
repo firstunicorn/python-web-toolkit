@@ -1,7 +1,7 @@
 """Python Mediator - Generic mediator pattern implementation."""
 
-from python_mediator.mediator import Mediator
-from python_mediator.behaviors import (
+from gridflow_python_mediator.mediator import Mediator
+from gridflow_python_mediator.behaviors import (
     PipelineBehavior,
     LoggingBehavior,
     TimingBehavior,

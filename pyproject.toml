@@ -31,7 +31,7 @@ python-input-validation = {path = "packages/python-input-validation", develop = 
 
 # CQRS & Mediator Pattern
 python-cqrs-core = {path = "packages/python-cqrs-core", develop = true}
-python-mediator = {path = "packages/python-mediator", develop = true}
+gridflow-python-mediator = {path = "packages/gridflow-python-mediator", develop = true}
 python-cqrs-dispatcher = {path = "packages/python-cqrs-dispatcher", develop = true}
 
 # Data & Mapping
@@ -135,7 +135,7 @@ root_packages = [
     "python_input_validation",
     "postgres_data_sanitizers",
     "python_cqrs_core",
-    "python_mediator",
+    "gridflow_python_mediator",
     "pydantic_response_models",
     "python_structlog_config",
     "python_domain_events",
@@ -161,7 +161,7 @@ forbidden_modules = [
     "sqlalchemy_async_repositories",
     "fastapi_middleware_toolkit",
     "fastapi_config_patterns",
-    "python_mediator",
+    "gridflow_python_mediator",
     "python_cqrs_core",
     "pydantic_response_models",
     "python_dto_mappers",
@@ -172,7 +172,7 @@ name = "Domain Layer Cannot Import Application"
 type = "forbidden"
 source_modules = [
     "python_cqrs_core",
-    "python_mediator",
+    "gridflow_python_mediator",
     "python_domain_events",
     "pydantic_response_models",
     "python_dto_mappers",
@@ -190,5 +190,5 @@ name = "Core Components Independence"
 type = "independence"
 modules = [
     "python_cqrs_core",
-    "python_mediator",
+    "gridflow_python_mediator",
 ]

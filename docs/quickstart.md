@@ -5,7 +5,7 @@
 All packages are published to PyPI. Install only what you need:
 
 ```bash
-pip install python-cqrs-core python-mediator python-cqrs-dispatcher
+pip install python-cqrs-core gridflow-python-mediator python-cqrs-dispatcher
 pip install sqlalchemy-async-session-factory sqlalchemy-async-repositories
 pip install fastapi-config-patterns fastapi-middleware-toolkit
 pip install python-structlog-config python-outbox-core
