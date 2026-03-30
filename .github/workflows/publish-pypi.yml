@@ -101,10 +101,10 @@ jobs:
                   )
                   
                   if response.status_code == 404:
-                      print(f"  ✓ NEW PACKAGE - Not on PyPI yet (will publish)")
+                      print(f"  [NEW] Not on PyPI yet (will publish)")
                       continue
                   elif response.status_code != 200:
-                      print(f"  ⚠ WARNING - PyPI API error: {response.status_code}")
+                      print(f"  [WARN] PyPI API error: {response.status_code}")
                       continue
                   
                   pypi_data = response.json()
@@ -113,7 +113,7 @@ jobs:
                   
                   if pkg_version in pypi_versions:
                       # Version exists on PyPI - check if code changed
-                      print(f"  ⚠ VERSION {pkg_version} ALREADY EXISTS on PyPI")
+                      print(f"  [EXISTS] Version {pkg_version} already on PyPI")
                       
                       # Get git commit hash for this package
                       import subprocess
@@ -126,28 +126,28 @@ jobs:
                           
                           if current_commit:
                               print(f"  Current commit: {current_commit}")
-                              print(f"  ❌ ERROR: Code changed but version not bumped!")
+                              print(f"  [ERROR] Code changed but version not bumped!")
                               errors.append(
                                   f"{pkg_name}: Built version {pkg_version} already on PyPI "
                                   f"but code has changed (commit {current_commit}). "
                                   f"Bump version in pyproject.toml"
                               )
                           else:
-                              print(f"  ⚠ WARNING: Cannot determine git changes")
+                              print(f"  [WARN] Cannot determine git changes")
                       except Exception as e:
-                          print(f"  ⚠ WARNING: Could not check git history: {e}")
+                          print(f"  [WARN] Could not check git history: {e}")
                   else:
-                      print(f"  ✓ NEW VERSION {pkg_version} (will publish)")
+                      print(f"  [NEW VERSION] {pkg_version} (will publish)")
                       if latest_pypi:
                           print(f"    Latest on PyPI: {latest_pypi}")
                   
               except requests.RequestException as e:
-                  print(f"  ⚠ WARNING - Could not check PyPI: {e}")
+                  print(f"  [WARN] Could not check PyPI: {e}")
           
           print("\n" + "=" * 70)
           
           if errors:
-              print("❌ VERSION CHECK FAILED")
+              print("[FAILED] VERSION CHECK FAILED")
               print("\nErrors:")
               for error in errors:
                   print(f"  - {error}")
@@ -157,7 +157,7 @@ jobs:
               print("  3. Re-run this workflow")
               exit(1)
           else:
-              print("✅ VERSION CHECK PASSED")
+              print("[PASSED] VERSION CHECK PASSED")
               print("\nAll packages either:")
               print("  - Are new (not on PyPI yet)")
               print("  - Have new versions not yet published")
