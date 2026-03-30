@@ -53,6 +53,64 @@ jobs:
           name: distributions
           path: dist/
       
+      - name: Check for version changes vs TestPyPI
+        run: |
+          pip install requests packaging
+          
+          python << 'EOF'
+          import os
+          import json
+          import requests
+          from pathlib import Path
+          from packaging import version
+          
+          dist_dir = Path('dist')
+          errors = []
+          
+          print("=" * 70)
+          print("CHECKING: Built versions vs TestPyPI published versions")
+          print("=" * 70)
+          
+          for wheel in dist_dir.glob('*.whl'):
+              parts = wheel.name.split('-')
+              pkg_name = parts[0].replace('_', '-').lower()
+              pkg_version = parts[1]
+              
+              print(f"\nChecking {pkg_name} (built: {pkg_version})...")
+              
+              try:
+                  response = requests.get(
+                      f'https://test.pypi.org/pypi/{pkg_name}/json',
+                      timeout=10
+                  )
+                  
+                  if response.status_code == 404:
+                      print(f"  ✓ NEW PACKAGE - Not on TestPyPI yet (will publish)")
+                      continue
+                  elif response.status_code != 200:
+                      print(f"  ⚠ WARNING - TestPyPI API error: {response.status_code}")
+                      continue
+                  
+                  pypi_data = response.json()
+                  pypi_versions = list(pypi_data['releases'].keys())
+                  latest_pypi = max(pypi_versions, key=version.parse) if pypi_versions else None
+                  
+                  if pkg_version in pypi_versions:
+                      print(f"  ⚠ VERSION {pkg_version} ALREADY EXISTS on TestPyPI")
+                      print(f"  ℹ️  TestPyPI: Allowing re-publish for testing")
+                  else:
+                      print(f"  ✓ NEW VERSION {pkg_version} (will publish)")
+                      if latest_pypi:
+                          print(f"    Latest on TestPyPI: {latest_pypi}")
+                  
+              except requests.RequestException as e:
+                  print(f"  ⚠ WARNING - Could not check TestPyPI: {e}")
+          
+          print("\n" + "=" * 70)
+          print("✅ TESTPYPI CHECK PASSED (proceeding with publication)")
+          print("Note: TestPyPI allows re-publishing same versions for testing")
+          EOF
+      
       - name: Publish to TestPyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:

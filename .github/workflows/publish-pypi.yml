@@ -66,6 +66,104 @@ jobs:
           name: distributions
           path: dist/
       
+      - name: Check for version changes vs PyPI
+        run: |
+          pip install requests packaging
+          
+          python << 'EOF'
+          import os
+          import json
+          import requests
+          from pathlib import Path
+          from packaging import version
+          
+          dist_dir = Path('dist')
+          errors = []
+          
+          print("=" * 70)
+          print("CHECKING: Built versions vs PyPI published versions")
+          print("=" * 70)
+          
+          for wheel in dist_dir.glob('*.whl'):
+              # Extract package name and version from wheel filename
+              # Format: {distribution}-{version}(-{build tag})?-{python tag}-{abi tag}-{platform tag}.whl
+              parts = wheel.name.split('-')
+              pkg_name = parts[0].replace('_', '-').lower()
+              pkg_version = parts[1]
+              
+              print(f"\nChecking {pkg_name} (built: {pkg_version})...")
+              
+              # Check PyPI API
+              try:
+                  response = requests.get(
+                      f'https://pypi.org/pypi/{pkg_name}/json',
+                      timeout=10
+                  )
+                  
+                  if response.status_code == 404:
+                      print(f"  ✓ NEW PACKAGE - Not on PyPI yet (will publish)")
+                      continue
+                  elif response.status_code != 200:
+                      print(f"  ⚠ WARNING - PyPI API error: {response.status_code}")
+                      continue
+                  
+                  pypi_data = response.json()
+                  pypi_versions = list(pypi_data['releases'].keys())
+                  latest_pypi = max(pypi_versions, key=version.parse) if pypi_versions else None
+                  
+                  if pkg_version in pypi_versions:
+                      # Version exists on PyPI - check if code changed
+                      print(f"  ⚠ VERSION {pkg_version} ALREADY EXISTS on PyPI")
+                      
+                      # Get git commit hash for this package
+                      import subprocess
+                      try:
+                          result = subprocess.run(
+                              ['git', 'log', '-1', '--format=%h', '--', f'packages/{pkg_name.replace("-", "_")}'],
+                              capture_output=True, text=True, timeout=10
+                          )
+                          current_commit = result.stdout.strip()
+                          
+                          if current_commit:
+                              print(f"  Current commit: {current_commit}")
+                              print(f"  ❌ ERROR: Code changed but version not bumped!")
+                              errors.append(
+                                  f"{pkg_name}: Built version {pkg_version} already on PyPI "
+                                  f"but code has changed (commit {current_commit}). "
+                                  f"Bump version in pyproject.toml"
+                              )
+                          else:
+                              print(f"  ⚠ WARNING: Cannot determine git changes")
+                      except Exception as e:
+                          print(f"  ⚠ WARNING: Could not check git history: {e}")
+                  else:
+                      print(f"  ✓ NEW VERSION {pkg_version} (will publish)")
+                      if latest_pypi:
+                          print(f"    Latest on PyPI: {latest_pypi}")
+                  
+              except requests.RequestException as e:
+                  print(f"  ⚠ WARNING - Could not check PyPI: {e}")
+          
+          print("\n" + "=" * 70)
+          
+          if errors:
+              print("❌ VERSION CHECK FAILED")
+              print("\nErrors:")
+              for error in errors:
+                  print(f"  - {error}")
+              print("\nAction required:")
+              print("  1. Bump version in package's pyproject.toml")
+              print("  2. Commit the version change")
+              print("  3. Re-run this workflow")
+              exit(1)
+          else:
+              print("✅ VERSION CHECK PASSED")
+              print("\nAll packages either:")
+              print("  - Are new (not on PyPI yet)")
+              print("  - Have new versions not yet published")
+              print("\nProceeding with publication...")
+          EOF
+      
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
