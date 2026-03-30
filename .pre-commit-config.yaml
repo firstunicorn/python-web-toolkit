@@ -1,0 +1,23 @@
+repos:
+  - repo: https://github.com/python-poetry/poetry
+    rev: '1.8.0'
+    hooks:
+      - id: poetry-check
+        name: Validate pyproject.toml
+        description: Check pyproject.toml validity
+        
+      - id: poetry-lock
+        name: Check poetry.lock is up to date
+        description: Verify lock file matches pyproject.toml
+        args: ['--check']
+
+  - repo: local
+    hooks:
+      - id: validate-package-consistency
+        name: Validate package name/path consistency
+        description: Check that package names match their directory structure
+        entry: python scripts/validation/validate_packages.py
+        language: python
+        additional_dependencies: ['toml']
+        pass_filenames: false
+        files: '^(pyproject\.toml|poetry\.lock|packages/.*/pyproject\.toml)$'

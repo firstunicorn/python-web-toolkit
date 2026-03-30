@@ -1,0 +1,152 @@
+name: Validate Dependencies
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      
+      - name: Install Poetry and dependencies
+        run: |
+          pip install poetry toml
+      
+      # Option 1: Poetry lock file validation
+      - name: Check pyproject.toml validity
+        run: poetry check
+      
+      - name: Verify lock file is up to date
+        run: poetry check --lock
+      
+      # Option 4: Multi-package validation
+      - name: Validate all package metadata
+        run: |
+          for pkg_dir in packages/*/; do
+            if [ -f "$pkg_dir/pyproject.toml" ]; then
+              echo "Validating $(basename $pkg_dir)..."
+              cd "$pkg_dir"
+              poetry check || exit 1
+              cd ../..
+            fi
+          done
+      
+      # Approach B: Name/path validation + Approach C: Orphaned references
+      - name: Validate dependency consistency (name/path matching + orphaned refs)
+        run: |
+          python << 'EOF'
+          import toml
+          import os
+          import re
+          
+          errors = []
+          
+          print("=" * 60)
+          print("STEP 1: Checking name/path consistency")
+          print("=" * 60)
+          
+          # 1. Check name/path consistency
+          root = toml.load('pyproject.toml')
+          deps = root.get('tool', {}).get('poetry', {}).get('dependencies', {})
+          
+          for pkg_name, config in deps.items():
+              if isinstance(config, dict) and 'path' in config:
+                  path = config['path']
+                  print(f"Checking {pkg_name} -> {path}")
+                  
+                  if not os.path.exists(path):
+                      errors.append(f"Missing path: {pkg_name} -> {path}")
+                      continue
+                  
+                  pkg_toml = os.path.join(path, 'pyproject.toml')
+                  if os.path.exists(pkg_toml):
+                      pkg_config = toml.load(pkg_toml)
+                      actual_name = pkg_config.get('tool', {}).get('poetry', {}).get('name')
+                      if actual_name and actual_name != pkg_name:
+                          errors.append(
+                              f"Name mismatch: dependency key '{pkg_name}' but "
+                              f"package defines name as '{actual_name}' at {path}"
+                          )
+                      else:
+                          print(f"  ✓ {pkg_name} matches package name")
+                  else:
+                      errors.append(f"Missing pyproject.toml in {path}")
+          
+          print("\n" + "=" * 60)
+          print("STEP 2: Checking for orphaned references in lock file")
+          print("=" * 60)
+          
+          # 2. Check for orphaned references in lock file
+          actual_pkgs = set(os.listdir('packages'))
+          print(f"Actual packages in packages/: {sorted(actual_pkgs)}")
+          
+          with open('poetry.lock') as f:
+              lock_content = f.read()
+              refs = set(re.findall(r'packages/([^/\s"]+)', lock_content))
+          
+          print(f"Packages referenced in lock file: {sorted(refs)}")
+          
+          orphaned = refs - actual_pkgs
+          if orphaned:
+              errors.append(f"Orphaned lock file references: {', '.join(sorted(orphaned))}")
+          else:
+              print("  ✓ No orphaned references found")
+          
+          print("\n" + "=" * 60)
+          print("VALIDATION RESULTS")
+          print("=" * 60)
+          
+          if errors:
+              print("ERRORS FOUND:")
+              for e in errors:
+                  print(f"  ✗ {e}")
+              exit(1)
+          else:
+              print("✓ All dependency references are valid")
+          EOF
+      
+      # Approach D: Lock file sync validation
+      - name: Verify lock file is properly synced
+        run: |
+          echo "Backing up current lock file..."
+          cp poetry.lock poetry.lock.original
+          
+          echo "Regenerating lock file..."
+          poetry lock --no-update
+          
+          echo "Comparing files..."
+          if ! diff -q poetry.lock.original poetry.lock; then
+            echo "ERROR: poetry.lock is out of sync with pyproject.toml"
+            echo ""
+            echo "Differences found:"
+            diff poetry.lock.original poetry.lock || true
+            echo ""
+            echo "Please run 'poetry lock' locally and commit the updated lock file."
+            exit 1
+          fi
+          
+          echo "✓ Lock file is properly synced"
+      
+      # Option 3: Full dependency installation test
+      - name: Test clean installation
+        run: |
+          echo "Removing existing virtual environment..."
+          rm -rf .venv
+          
+          echo "Installing dependencies with --sync..."
+          poetry install --sync
+          
+          echo ""
+          echo "Installed packages:"
+          poetry show
+          
+          echo ""
+          echo "✓ All packages installed successfully"
