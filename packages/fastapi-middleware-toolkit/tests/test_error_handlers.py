@@ -60,6 +60,39 @@ def test_validation_error_handler():
     assert "errors" in response.json()
 
 
+def test_validation_error_with_exception_in_context_answers_422():
+    """A validator that raises ValueError puts the exception object into the error context.
+
+    REGRESSION: exc.errors() was sent as it is, the JSON encoder failed and the answer was 500.
+    """
+    from pydantic import BaseModel, field_validator
+
+    class Item(BaseModel):
+        name: str
+
+        @field_validator("name")
+        @classmethod
+        def reject_blank(cls, value: str) -> str:
+            if not value.strip():
+                raise ValueError("name must not be blank")
+            return value
+
+    app = FastAPI()
+    setup_error_handlers(app)
+
+    @app.post("/test")
+    def test_endpoint(item: Item):
+        return item
+
+    client = TestClient(app, raise_server_exceptions=False)
+    response = client.post("/test", json={"name": "  "})
+
+    assert response.status_code == 422
+    body = response.json()
+    assert body["detail"] == "Validation error"
+    assert "name must not be blank" in str(body["errors"])
+
+
 def test_custom_exception_handler():
     """Test custom exception class handling."""
     

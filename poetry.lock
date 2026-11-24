@@ -561,7 +561,7 @@ url = "packages/fastapi-config-patterns"
 
 [[package]]
 name = "fastapi-middleware-toolkit"
-version = "0.1.0"
+version = "0.1.1"
 description = "Reusable FastAPI middleware setup functions (CORS, error handlers, lifespan)"
 optional = false
 python-versions = ">=3.10"
