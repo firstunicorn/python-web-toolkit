@@ -1,6 +1,6 @@
 [project]
 name = "fastapi-middleware-toolkit"
-version = "0.1.0"
+version = "0.1.1"
 description = "Reusable FastAPI middleware setup functions (CORS, error handlers, lifespan)"
 readme = "README.md"
 requires-python = ">=3.10"

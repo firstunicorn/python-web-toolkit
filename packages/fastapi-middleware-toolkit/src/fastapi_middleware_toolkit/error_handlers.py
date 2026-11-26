@@ -6,6 +6,7 @@ Extracted from GridFlow backend/src/middleware/error_handler.py
 import structlog
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
+from fastapi.encoders import jsonable_encoder
 from fastapi.exceptions import RequestValidationError
 from starlette.exceptions import HTTPException
 from typing import Optional, Type
@@ -77,9 +78,12 @@ def setup_error_handlers(
         exc: RequestValidationError
     ):
         """Handle request validation errors."""
+        # REGRESSION GUARD: exc.errors() holds exception objects in `ctx` when a validator raises
+        # ValueError. JSONResponse cannot encode them (the answer was 500), so ENCODE FIRST.
+        errors = jsonable_encoder(exc.errors())
         logger.warning(
             "Validation error occurred",
-            errors=exc.errors(),
+            errors=errors,
             path=str(request.url),
             method=request.method
         )
@@ -87,7 +91,7 @@ def setup_error_handlers(
             status_code=422,
             content={
                 "detail": "Validation error",
-                "errors": exc.errors()
+                "errors": errors
             }
         )
 
